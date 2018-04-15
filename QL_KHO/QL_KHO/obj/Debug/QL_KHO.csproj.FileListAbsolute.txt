@@ -12,3 +12,15 @@ E:\Nam_3_Kỳ2\Thuctapnhom\QL_Kho\QL_KHO\QL_KHO\obj\Debug\QL_KHO.View.ucNhapHang
 E:\Nam_3_Kỳ2\Thuctapnhom\QL_Kho\QL_KHO\QL_KHO\obj\Debug\QL_KHO.View.uc_TrangChu.resources
 E:\Nam_3_Kỳ2\Thuctapnhom\KHO\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.exe
 E:\Nam_3_Kỳ2\Thuctapnhom\KHO\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.pdb
+E:\Nam_3_Kỳ2\Thuctapnhom\KHO\QL_KHO\QL_KHO\QL_KHO\bin\Debug\QL_KHO.exe
+E:\Nam_3_Kỳ2\Thuctapnhom\KHO\QL_KHO\QL_KHO\QL_KHO\bin\Debug\QL_KHO.pdb
+E:\Nam_3_Kỳ2\Thuctapnhom\KHO\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.csprojResolveAssemblyReference.cache
+E:\Nam_3_Kỳ2\Thuctapnhom\KHO\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.frmDangNhap.resources
+E:\Nam_3_Kỳ2\Thuctapnhom\KHO\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.frmDangNhap_CSDL.resources
+E:\Nam_3_Kỳ2\Thuctapnhom\KHO\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.Properties.Resources.resources
+E:\Nam_3_Kỳ2\Thuctapnhom\KHO\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.View.frmMain.resources
+E:\Nam_3_Kỳ2\Thuctapnhom\KHO\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.View.ucNhapHang.resources
+E:\Nam_3_Kỳ2\Thuctapnhom\KHO\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.View.uC_HangHoa.resources
+E:\Nam_3_Kỳ2\Thuctapnhom\KHO\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.View.uc_ThongKe.resources
+E:\Nam_3_Kỳ2\Thuctapnhom\KHO\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.View.uc_TrangChu.resources
+E:\Nam_3_Kỳ2\Thuctapnhom\KHO\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.csproj.GenerateResource.Cache

@@ -5,51 +5,12 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 
-namespace QL_KHO.Model
+namespace QL_KHO.Controller
 {
-    class PhieuXuat
+    class ThongKe_Controller
     {
-        private string maPX;
-        private DateTime ngayXuat;
-        private float tongTien;
         SqlConnection conn = new SqlConnection(Controller.ConnectDatabase.ConnectionString);
         SqlCommand cmd = new SqlCommand();
-        public string MaPX
-        {
-            get
-            {
-                return maPX;
-            }
-
-            set
-            {
-                maPX = value;
-            }
-        }
-        public DateTime NgayXuat
-        {
-            get
-            {
-                return ngayXuat;
-            }
-
-            set
-            {
-                ngayXuat = value;
-            }
-        }
-        public float TongTien
-        {
-            get
-            {
-                return tongTien;
-            }
-
-            set
-            {
-                tongTien = value;
-            }
-        }
         public DataTable GetData(string s)
         {
             DataTable dt = new DataTable();
@@ -61,8 +22,8 @@ namespace QL_KHO.Model
             try
             {
                 conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                sda.Fill(dt);
                 conn.Close();
             }
             catch
@@ -72,12 +33,28 @@ namespace QL_KHO.Model
             }
             return dt;
         }
+        public DataTable GetData_proc(string proc)
+        {
+            try
+            {
+                conn.Open();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(proc, conn);
+                da.Fill(dt);
+                conn.Close();
+                return dt;
+            }
+            catch (SqlException)
+            {
+                conn.Close();
+                return null;
+            }
+        }
         public bool ThucHienLenh(string s)
         {
             cmd.CommandText = s;
             cmd.CommandType = CommandType.Text;
             cmd.Connection = conn;
-
             try
             {
                 conn.Open();
@@ -90,8 +67,6 @@ namespace QL_KHO.Model
                 conn.Close();
             }
             return false;
-
         }
-
     }
 }
