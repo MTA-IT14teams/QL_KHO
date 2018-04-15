@@ -10,3 +10,5 @@ E:\Nam_3_Kỳ2\Thuctapnhom\QL_Kho\QL_KHO\QL_KHO\obj\Debug\QL_KHO.pdb
 E:\Nam_3_Kỳ2\Thuctapnhom\QL_Kho\QL_KHO\QL_KHO\obj\Debug\QL_KHO.View.frmMain.resources
 E:\Nam_3_Kỳ2\Thuctapnhom\QL_Kho\QL_KHO\QL_KHO\obj\Debug\QL_KHO.View.ucNhapHang.resources
 E:\Nam_3_Kỳ2\Thuctapnhom\QL_Kho\QL_KHO\QL_KHO\obj\Debug\QL_KHO.View.uc_TrangChu.resources
+E:\Nam_3_Kỳ2\Thuctapnhom\KHO\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.exe
+E:\Nam_3_Kỳ2\Thuctapnhom\KHO\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.pdb
