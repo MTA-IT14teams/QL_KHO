@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Controller\ConnectDatabase.cs" />
     <Compile Include="Controller\ThongKe_Controller.cs" />
+    <Compile Include="Controller\TimKiem_Controller.cs" />
     <Compile Include="DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\uc_ThongKe.resx">
       <DependentUpon>uc_ThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\uc_TimKiem.resx">
+      <DependentUpon>uc_TimKiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\uc_TrangChu.resx">
       <DependentUpon>uc_TrangChu.cs</DependentUpon>
