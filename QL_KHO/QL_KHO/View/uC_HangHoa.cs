@@ -15,5 +15,10 @@ namespace QL_KHO.View
         {
             InitializeComponent();
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
