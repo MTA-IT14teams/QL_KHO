@@ -34,7 +34,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTenNCC = new System.Windows.Forms.TextBox();
             this.txtMaNCC = new System.Windows.Forms.TextBox();
@@ -45,14 +48,17 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvNhaCungCap = new System.Windows.Forms.DataGridView();
-            this.txtDiaChi = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnluu = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnxoa = new System.Windows.Forms.Button();
             this.btnsua = new System.Windows.Forms.Button();
             this.btnthem = new System.Windows.Forms.Button();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -127,7 +133,20 @@
             this.label4.Size = new System.Drawing.Size(45, 15);
             this.label4.TabIndex = 0;
             this.label4.Text = "Địa chỉ";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // txtDiaChi
+            // 
+            this.txtDiaChi.Location = new System.Drawing.Point(142, 110);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(193, 22);
+            this.txtDiaChi.TabIndex = 1;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(142, 181);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(193, 22);
+            this.txtEmail.TabIndex = 1;
             // 
             // txtSDT
             // 
@@ -135,6 +154,16 @@
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(193, 22);
             this.txtSDT.TabIndex = 1;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(23, 184);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(39, 15);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Email";
             // 
             // label5
             // 
@@ -204,6 +233,7 @@
             this.btnTimKiem.TabIndex = 86;
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // txtTimKiem
             // 
@@ -225,35 +255,21 @@
             // 
             this.dgvNhaCungCap.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvNhaCungCap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNhaCungCap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.STT,
+            this.maNCC,
+            this.tenNCC,
+            this.diaChi,
+            this.SDT,
+            this.email});
             this.dgvNhaCungCap.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvNhaCungCap.Location = new System.Drawing.Point(3, 16);
             this.dgvNhaCungCap.Name = "dgvNhaCungCap";
+            this.dgvNhaCungCap.RowHeadersVisible = false;
             this.dgvNhaCungCap.Size = new System.Drawing.Size(696, 191);
             this.dgvNhaCungCap.TabIndex = 0;
-            // 
-            // txtDiaChi
-            // 
-            this.txtDiaChi.Location = new System.Drawing.Point(142, 110);
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(193, 22);
-            this.txtDiaChi.TabIndex = 1;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(23, 184);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(39, 15);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Email";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(142, 181);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(193, 22);
-            this.txtEmail.TabIndex = 1;
+            this.dgvNhaCungCap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhaCungCap_CellClick);
+            this.dgvNhaCungCap.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvNhaCungCap_RowPrePaint);
             // 
             // btnluu
             // 
@@ -265,6 +281,7 @@
             this.btnluu.TabIndex = 91;
             this.btnluu.Text = "Lưu";
             this.btnluu.UseVisualStyleBackColor = false;
+            this.btnluu.Click += new System.EventHandler(this.btnluu_Click);
             // 
             // btnThoat
             // 
@@ -276,6 +293,7 @@
             this.btnThoat.TabIndex = 92;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // btnxoa
             // 
@@ -287,6 +305,7 @@
             this.btnxoa.TabIndex = 93;
             this.btnxoa.Text = "Xóa";
             this.btnxoa.UseVisualStyleBackColor = false;
+            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
             // 
             // btnsua
             // 
@@ -298,6 +317,7 @@
             this.btnsua.TabIndex = 94;
             this.btnsua.Text = "Sửa";
             this.btnsua.UseVisualStyleBackColor = false;
+            this.btnsua.Click += new System.EventHandler(this.btnsua_Click);
             // 
             // btnthem
             // 
@@ -309,6 +329,44 @@
             this.btnthem.TabIndex = 95;
             this.btnthem.Text = "Thêm";
             this.btnthem.UseVisualStyleBackColor = false;
+            this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.Width = 50;
+            // 
+            // maNCC
+            // 
+            this.maNCC.DataPropertyName = "maNCC";
+            this.maNCC.HeaderText = "Mã NCC";
+            this.maNCC.Name = "maNCC";
+            // 
+            // tenNCC
+            // 
+            this.tenNCC.DataPropertyName = "tenNCC";
+            this.tenNCC.HeaderText = "Tên NCC";
+            this.tenNCC.Name = "tenNCC";
+            // 
+            // diaChi
+            // 
+            this.diaChi.DataPropertyName = "diaChi";
+            this.diaChi.HeaderText = "Địa chỉ";
+            this.diaChi.Name = "diaChi";
+            // 
+            // SDT
+            // 
+            this.SDT.DataPropertyName = "SDT";
+            this.SDT.HeaderText = "SĐT";
+            this.SDT.Name = "SDT";
+            // 
+            // email
+            // 
+            this.email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
             // 
             // uc_NhaCungCap
             // 
@@ -329,6 +387,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "uc_NhaCungCap";
             this.Size = new System.Drawing.Size(758, 551);
+            this.Load += new System.EventHandler(this.uc_NhaCungCap_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -367,5 +426,11 @@
         private System.Windows.Forms.Button btnxoa;
         private System.Windows.Forms.Button btnsua;
         private System.Windows.Forms.Button btnthem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maNCC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenNCC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diaChi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
     }
 }

@@ -33,5 +33,10 @@ namespace QL_KHO.Model
             get { return SDT; }
             set { SDT = value; }
         }
+        public string Email
+        {
+            get { return email; }
+            set { email = value; }
+        }
     }
 }
