@@ -75,9 +75,14 @@ namespace QL_KHO.Controller
             return count;
         }
 
+
         public DataTable GetData()
         {
             return GetData("dbo.Xem_HH", null);
+        }
+        public DataTable GetTenHH()
+        {
+            return GetData("dbo.Xem_TenNCC", null);
         }
 
         public int InsertData(HangHoa HH)
@@ -115,7 +120,7 @@ namespace QL_KHO.Controller
             return ExcuteSQL("dbo.xoa_HH", para);
         }
 
-        public DataTable TimKiemNCC(string strTimKiem)
+        public DataTable TimKiemHH(string strTimKiem)
         {
             return GetData(strTimKiem);
         }

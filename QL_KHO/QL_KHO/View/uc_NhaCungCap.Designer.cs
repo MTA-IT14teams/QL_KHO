@@ -48,21 +48,23 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvNhaCungCap = new System.Windows.Forms.DataGridView();
-            this.btnluu = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.btnxoa = new System.Windows.Forms.Button();
-            this.btnsua = new System.Windows.Forms.Button();
-            this.btnthem = new System.Windows.Forms.Button();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnluu = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnxoa = new System.Windows.Forms.Button();
+            this.btnsua = new System.Windows.Forms.Button();
+            this.btnthem = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhaCungCap)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -193,7 +195,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(363, 105);
+            this.label6.Location = new System.Drawing.Point(12, 15);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 15);
             this.label6.TabIndex = 80;
@@ -203,7 +205,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(363, 144);
+            this.label7.Location = new System.Drawing.Point(12, 54);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 15);
             this.label7.TabIndex = 81;
@@ -218,7 +220,7 @@
             "Địa chỉ",
             "SĐT",
             "Email"});
-            this.cbTimKiem.Location = new System.Drawing.Point(454, 104);
+            this.cbTimKiem.Location = new System.Drawing.Point(103, 14);
             this.cbTimKiem.Name = "cbTimKiem";
             this.cbTimKiem.Size = new System.Drawing.Size(193, 21);
             this.cbTimKiem.TabIndex = 83;
@@ -227,7 +229,7 @@
             // 
             this.btnTimKiem.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.Location = new System.Drawing.Point(670, 104);
+            this.btnTimKiem.Location = new System.Drawing.Point(319, 14);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(70, 59);
             this.btnTimKiem.TabIndex = 86;
@@ -237,7 +239,7 @@
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Location = new System.Drawing.Point(454, 143);
+            this.txtTimKiem.Location = new System.Drawing.Point(103, 53);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(193, 20);
             this.txtTimKiem.TabIndex = 82;
@@ -245,9 +247,9 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvNhaCungCap);
-            this.groupBox2.Location = new System.Drawing.Point(29, 298);
+            this.groupBox2.Location = new System.Drawing.Point(0, 298);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(702, 210);
+            this.groupBox2.Size = new System.Drawing.Size(760, 236);
             this.groupBox2.TabIndex = 90;
             this.groupBox2.TabStop = false;
             // 
@@ -266,70 +268,10 @@
             this.dgvNhaCungCap.Location = new System.Drawing.Point(3, 16);
             this.dgvNhaCungCap.Name = "dgvNhaCungCap";
             this.dgvNhaCungCap.RowHeadersVisible = false;
-            this.dgvNhaCungCap.Size = new System.Drawing.Size(696, 191);
+            this.dgvNhaCungCap.Size = new System.Drawing.Size(754, 217);
             this.dgvNhaCungCap.TabIndex = 0;
             this.dgvNhaCungCap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhaCungCap_CellClick);
             this.dgvNhaCungCap.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvNhaCungCap_RowPrePaint);
-            // 
-            // btnluu
-            // 
-            this.btnluu.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnluu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnluu.Location = new System.Drawing.Point(670, 196);
-            this.btnluu.Name = "btnluu";
-            this.btnluu.Size = new System.Drawing.Size(70, 33);
-            this.btnluu.TabIndex = 91;
-            this.btnluu.Text = "Lưu";
-            this.btnluu.UseVisualStyleBackColor = false;
-            this.btnluu.Click += new System.EventHandler(this.btnluu_Click);
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.Location = new System.Drawing.Point(670, 255);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(70, 33);
-            this.btnThoat.TabIndex = 92;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.UseVisualStyleBackColor = false;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
-            // btnxoa
-            // 
-            this.btnxoa.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnxoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnxoa.Location = new System.Drawing.Point(567, 196);
-            this.btnxoa.Name = "btnxoa";
-            this.btnxoa.Size = new System.Drawing.Size(70, 33);
-            this.btnxoa.TabIndex = 93;
-            this.btnxoa.Text = "Xóa";
-            this.btnxoa.UseVisualStyleBackColor = false;
-            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
-            // 
-            // btnsua
-            // 
-            this.btnsua.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnsua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsua.Location = new System.Drawing.Point(465, 196);
-            this.btnsua.Name = "btnsua";
-            this.btnsua.Size = new System.Drawing.Size(70, 33);
-            this.btnsua.TabIndex = 94;
-            this.btnsua.Text = "Sửa";
-            this.btnsua.UseVisualStyleBackColor = false;
-            this.btnsua.Click += new System.EventHandler(this.btnsua_Click);
-            // 
-            // btnthem
-            // 
-            this.btnthem.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnthem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnthem.Location = new System.Drawing.Point(366, 196);
-            this.btnthem.Name = "btnthem";
-            this.btnthem.Size = new System.Drawing.Size(70, 33);
-            this.btnthem.TabIndex = 95;
-            this.btnthem.Text = "Thêm";
-            this.btnthem.UseVisualStyleBackColor = false;
-            this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
             // 
             // STT
             // 
@@ -368,21 +310,90 @@
             this.email.HeaderText = "Email";
             this.email.Name = "email";
             // 
+            // btnluu
+            // 
+            this.btnluu.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnluu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnluu.Location = new System.Drawing.Point(319, 106);
+            this.btnluu.Name = "btnluu";
+            this.btnluu.Size = new System.Drawing.Size(70, 33);
+            this.btnluu.TabIndex = 91;
+            this.btnluu.Text = "Lưu";
+            this.btnluu.UseVisualStyleBackColor = false;
+            this.btnluu.Click += new System.EventHandler(this.btnluu_Click);
+            // 
+            // btnThoat
+            // 
+            this.btnThoat.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Location = new System.Drawing.Point(319, 165);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(70, 33);
+            this.btnThoat.TabIndex = 92;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // btnxoa
+            // 
+            this.btnxoa.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnxoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnxoa.Location = new System.Drawing.Point(216, 106);
+            this.btnxoa.Name = "btnxoa";
+            this.btnxoa.Size = new System.Drawing.Size(70, 33);
+            this.btnxoa.TabIndex = 93;
+            this.btnxoa.Text = "Xóa";
+            this.btnxoa.UseVisualStyleBackColor = false;
+            this.btnxoa.Click += new System.EventHandler(this.btnxoa_Click);
+            // 
+            // btnsua
+            // 
+            this.btnsua.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnsua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsua.Location = new System.Drawing.Point(114, 106);
+            this.btnsua.Name = "btnsua";
+            this.btnsua.Size = new System.Drawing.Size(70, 33);
+            this.btnsua.TabIndex = 94;
+            this.btnsua.Text = "Sửa";
+            this.btnsua.UseVisualStyleBackColor = false;
+            this.btnsua.Click += new System.EventHandler(this.btnsua_Click);
+            // 
+            // btnthem
+            // 
+            this.btnthem.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnthem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnthem.Location = new System.Drawing.Point(15, 106);
+            this.btnthem.Name = "btnthem";
+            this.btnthem.Size = new System.Drawing.Size(70, 33);
+            this.btnthem.TabIndex = 95;
+            this.btnthem.Text = "Thêm";
+            this.btnthem.UseVisualStyleBackColor = false;
+            this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btnTimKiem);
+            this.groupBox3.Controls.Add(this.btnluu);
+            this.groupBox3.Controls.Add(this.txtTimKiem);
+            this.groupBox3.Controls.Add(this.btnThoat);
+            this.groupBox3.Controls.Add(this.cbTimKiem);
+            this.groupBox3.Controls.Add(this.btnxoa);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.btnsua);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.btnthem);
+            this.groupBox3.Location = new System.Drawing.Point(363, 83);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(395, 209);
+            this.groupBox3.TabIndex = 96;
+            this.groupBox3.TabStop = false;
+            // 
             // uc_NhaCungCap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnluu);
-            this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.btnxoa);
-            this.Controls.Add(this.btnsua);
-            this.Controls.Add(this.btnthem);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.cbTimKiem);
-            this.Controls.Add(this.btnTimKiem);
-            this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Name = "uc_NhaCungCap";
@@ -394,8 +405,9 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhaCungCap)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -432,5 +444,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn diaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }

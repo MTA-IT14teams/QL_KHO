@@ -25,3 +25,15 @@ begin
 insert into HangHoa
 values(@MaHH,@TenHH,@MaNCC,@soluong)
 end
+
+-- thủ tục xem tên nhà cung cấp
+create proc dbo.Xem_TenNCC
+as
+begin
+select tenNCC
+from NCC, HangHoa
+where NCC.maNCC = HangHoa.maNCC
+end
+
+select maHH, tenHH, NCC.maNCC, soluong from HangHoa, NCC
+where HangHoa.maNCC = NCC.maNCC

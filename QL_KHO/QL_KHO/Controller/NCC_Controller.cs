@@ -46,17 +46,6 @@ namespace QL_KHO.Controller
             return dt;
         }
 
-        // thực thi = câu lệnh
-        public int ExcuteSQL(string strSQL)
-        {
-            SqlCommand cmd = new SqlCommand(strSQL, conn);
-            conn.Open();
-            int count = cmd.ExecuteNonQuery();
-            conn.Close();
-            return count;
-        }
-
-
         // thực thi bằng thủ tục
         public int ExcuteSQL(string NameProc, SqlParameter[] para)
         {
