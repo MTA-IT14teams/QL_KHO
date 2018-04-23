@@ -71,7 +71,7 @@ namespace QL_KHO.View
         {
             HienThi();
             ShowTenNCC();
-            DisEnl(false);
+            //DisEnl(false);
         }
 
         private void dgvHangHoa_CellClick(object sender, DataGridViewCellEventArgs e)
