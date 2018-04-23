@@ -24,3 +24,4 @@ E:\Nam_3_Kỳ2\Thuctapnhom\KHO\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.View.uC_Han
 E:\Nam_3_Kỳ2\Thuctapnhom\KHO\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.View.uc_ThongKe.resources
 E:\Nam_3_Kỳ2\Thuctapnhom\KHO\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.View.uc_TrangChu.resources
 E:\Nam_3_Kỳ2\Thuctapnhom\KHO\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.csproj.GenerateResource.Cache
+E:\Nam_3_Kỳ2\Thuctapnhom\KHO\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.View.uc_TimKiem.resources

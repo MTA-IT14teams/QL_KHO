@@ -47,9 +47,7 @@ namespace QL_KHO.View
         {
             string tenncc = string.Format("[Tên NCC] like '%{0}%'",txt_TenNCC.Text);
             dt.DefaultView.RowFilter = tenncc;
-        }
-
-        
+        }       
 
     }
 }
