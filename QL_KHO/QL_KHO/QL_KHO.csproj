@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\ConnectDatabase.cs" />
+    <Compile Include="Controller\HangHoa_controller.cs" />
+    <Compile Include="Controller\NCC_Controller.cs" />
     <Compile Include="Controller\ThongKe_Controller.cs" />
     <Compile Include="Controller\TimKiem_Controller.cs" />
     <Compile Include="DangNhap.cs">
@@ -59,6 +61,8 @@
     <Compile Include="frmConnectDataBase.Designer.cs">
       <DependentUpon>frmConnectDataBase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\HangHoa.cs" />
+    <Compile Include="Model\NhaCungCap.cs" />
     <Compile Include="Model\PhieuNhap.cs" />
     <Compile Include="Model\PhieuXuat.cs" />
     <Compile Include="Program.cs" />
@@ -135,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\uC_HangHoa.resx">
       <DependentUpon>uC_HangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\uc_NhaCungCap.resx">
+      <DependentUpon>uc_NhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\uc_ThongKe.resx">
       <DependentUpon>uc_ThongKe.cs</DependentUpon>
