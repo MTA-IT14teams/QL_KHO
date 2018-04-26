@@ -100,7 +100,7 @@ namespace QL_KHO.Controller
             {
                 new SqlParameter("maNCC",ID)
         };
-            return ExcuteSQL("dbo.xoa_NCC", para);
+            return ExcuteSQL("dbo.Xoa_NhaCungCap", para);
         }
 
         public DataTable TimKiemNCC(string strTimKiem)

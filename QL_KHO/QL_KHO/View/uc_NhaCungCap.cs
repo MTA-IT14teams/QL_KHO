@@ -154,7 +154,7 @@ namespace QL_KHO.View
         private void btnxoa_Click(object sender, EventArgs e)
         {
 
-            if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Có thể bạn sẽ xóa tất cả hàng hóa của nhà cung cấp này! Bạn có chắc chắn muốn xóa?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
