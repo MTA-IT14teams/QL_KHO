@@ -22,18 +22,19 @@ namespace QL_KHO.View
         {
             dt = TK.GetData_proc("tk_hh");
             dtg_Data.DataSource = dt;
+            
         }
 
         private void btn_HangHoaNhap_Click(object sender, EventArgs e)
         {
             dt = TK.GetData_proc("tk_nhap");
-            dtg_Data.DataSource = dt;
+            dtg_HHN_HHX.DataSource = dt;
         }
 
         private void btn_HangHoaXuat_Click(object sender, EventArgs e)
         {
             dt = TK.GetData_proc("tk_xuat");
-            dtg_Data.DataSource = dt;
+            dtg_HHN_HHX.DataSource = dt;
         }
 
     }

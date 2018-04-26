@@ -38,6 +38,11 @@
             this.txt_TenNCC = new System.Windows.Forms.ToolStripTextBox();
             this.grB_Data = new System.Windows.Forms.GroupBox();
             this.dtg_Data = new System.Windows.Forms.DataGridView();
+            this.maHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ghichu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grB_Title.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
@@ -51,7 +56,7 @@
             this.grB_Title.Dock = System.Windows.Forms.DockStyle.Top;
             this.grB_Title.Location = new System.Drawing.Point(0, 0);
             this.grB_Title.Name = "grB_Title";
-            this.grB_Title.Size = new System.Drawing.Size(658, 100);
+            this.grB_Title.Size = new System.Drawing.Size(1164, 100);
             this.grB_Title.TabIndex = 0;
             this.grB_Title.TabStop = false;
             // 
@@ -98,7 +103,7 @@
             this.txt_TenNCC});
             this.menuStrip2.Location = new System.Drawing.Point(4, 147);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(316, 27);
+            this.menuStrip2.Size = new System.Drawing.Size(224, 27);
             this.menuStrip2.TabIndex = 2;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -121,18 +126,59 @@
             this.grB_Data.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.grB_Data.Location = new System.Drawing.Point(0, 225);
             this.grB_Data.Name = "grB_Data";
-            this.grB_Data.Size = new System.Drawing.Size(658, 342);
+            this.grB_Data.Size = new System.Drawing.Size(1164, 342);
             this.grB_Data.TabIndex = 3;
             this.grB_Data.TabStop = false;
             // 
             // dtg_Data
             // 
             this.dtg_Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtg_Data.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maHH,
+            this.tenHH,
+            this.tenNCC,
+            this.soluong,
+            this.ghichu});
             this.dtg_Data.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtg_Data.Location = new System.Drawing.Point(3, 16);
             this.dtg_Data.Name = "dtg_Data";
-            this.dtg_Data.Size = new System.Drawing.Size(652, 323);
+            this.dtg_Data.Size = new System.Drawing.Size(1158, 323);
             this.dtg_Data.TabIndex = 0;
+            // 
+            // maHH
+            // 
+            this.maHH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.maHH.DataPropertyName = "maHH";
+            this.maHH.HeaderText = "Mã hàng hóa";
+            this.maHH.Name = "maHH";
+            this.maHH.Width = 150;
+            // 
+            // tenHH
+            // 
+            this.tenHH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tenHH.DataPropertyName = "tenHH";
+            this.tenHH.HeaderText = "Tên hàng hóa";
+            this.tenHH.Name = "tenHH";
+            // 
+            // tenNCC
+            // 
+            this.tenNCC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tenNCC.DataPropertyName = "tenNCC";
+            this.tenNCC.HeaderText = "Tên nhà cung cấp";
+            this.tenNCC.Name = "tenNCC";
+            // 
+            // soluong
+            // 
+            this.soluong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.soluong.DataPropertyName = "soluong";
+            this.soluong.HeaderText = "Số lượng";
+            this.soluong.Name = "soluong";
+            // 
+            // ghichu
+            // 
+            this.ghichu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ghichu.HeaderText = "Ghi chú";
+            this.ghichu.Name = "ghichu";
             // 
             // uc_TimKiem
             // 
@@ -143,7 +189,7 @@
             this.Controls.Add(this.grB_Title);
             this.Controls.Add(this.menuStrip1);
             this.Name = "uc_TimKiem";
-            this.Size = new System.Drawing.Size(658, 567);
+            this.Size = new System.Drawing.Size(1164, 567);
             this.Load += new System.EventHandler(this.uc_TimKiem_Load);
             this.grB_Title.ResumeLayout(false);
             this.grB_Title.PerformLayout();
@@ -170,5 +216,10 @@
         private System.Windows.Forms.ToolStripTextBox txt_TenNCC;
         private System.Windows.Forms.GroupBox grB_Data;
         private System.Windows.Forms.DataGridView dtg_Data;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maHH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenHH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenNCC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soluong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ghichu;
     }
 }

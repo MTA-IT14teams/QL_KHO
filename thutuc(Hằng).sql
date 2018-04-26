@@ -4,14 +4,14 @@ as
 begin
 select * from NCC
 end
-
+go
 -- thủ tục xem hàng hóa
 create proc dbo.Xem_HH
 as
 begin
 select * from HangHoa
 end
-
+go
 -- thủ tục thêm hàng hóa
 create proc dbo.them_HH
 (
@@ -25,15 +25,15 @@ begin
 insert into HangHoa
 values(@MaHH,@TenHH,@MaNCC,@soluong)
 end
-
+go
 -- thủ tục xem tên nhà cung cấp
-create proc dbo.Xem_TenNCC
+alter proc dbo.Xem_TenNCC
 as
 begin
-select tenNCC
-from NCC, HangHoa
-where NCC.maNCC = HangHoa.maNCC
+select maNCC,tenNCC
+from NCC
 end
+go
 
 select maHH, tenHH, NCC.maNCC, soluong from HangHoa, NCC
 where HangHoa.maNCC = NCC.maNCC

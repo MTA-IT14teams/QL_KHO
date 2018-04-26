@@ -34,12 +34,18 @@
             this.btn_HangHoa = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_HangHoaNhap = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_HangHoaXuat = new System.Windows.Forms.ToolStripMenuItem();
-            this.grBData = new System.Windows.Forms.GroupBox();
             this.dtg_Data = new System.Windows.Forms.DataGridView();
+            this.dtg_HHN_HHX = new System.Windows.Forms.DataGridView();
+            this.grBData = new System.Windows.Forms.GroupBox();
+            this.maHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grBTitle.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.grBData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_Data)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_HHN_HHX)).BeginInit();
+            this.grBData.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -55,10 +61,9 @@
             // grBTitle
             // 
             this.grBTitle.Controls.Add(this.label1);
-            this.grBTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.grBTitle.Location = new System.Drawing.Point(0, 0);
             this.grBTitle.Name = "grBTitle";
-            this.grBTitle.Size = new System.Drawing.Size(654, 87);
+            this.grBTitle.Size = new System.Drawing.Size(1163, 87);
             this.grBTitle.TabIndex = 1;
             this.grBTitle.TabStop = false;
             // 
@@ -71,7 +76,7 @@
             this.btn_HangHoaXuat});
             this.menuStrip1.Location = new System.Drawing.Point(4, 94);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(368, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(276, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -96,24 +101,72 @@
             this.btn_HangHoaXuat.Text = "Hàng hóa xuất";
             this.btn_HangHoaXuat.Click += new System.EventHandler(this.btn_HangHoaXuat_Click);
             // 
+            // dtg_Data
+            // 
+            this.dtg_Data.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtg_Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtg_Data.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maHH,
+            this.tenHH,
+            this.tenNCC,
+            this.soluong});
+            this.dtg_Data.Location = new System.Drawing.Point(3, 16);
+            this.dtg_Data.Name = "dtg_Data";
+            this.dtg_Data.Size = new System.Drawing.Size(517, 436);
+            this.dtg_Data.TabIndex = 0;
+            // 
+            // dtg_HHN_HHX
+            // 
+            this.dtg_HHN_HHX.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtg_HHN_HHX.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtg_HHN_HHX.Location = new System.Drawing.Point(519, 16);
+            this.dtg_HHN_HHX.Name = "dtg_HHN_HHX";
+            this.dtg_HHN_HHX.Size = new System.Drawing.Size(704, 415);
+            this.dtg_HHN_HHX.TabIndex = 1;
+            // 
             // grBData
             // 
+            this.grBData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grBData.Controls.Add(this.dtg_HHN_HHX);
             this.grBData.Controls.Add(this.dtg_Data);
-            this.grBData.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.grBData.Location = new System.Drawing.Point(0, 121);
+            this.grBData.Location = new System.Drawing.Point(0, 142);
             this.grBData.Name = "grBData";
-            this.grBData.Size = new System.Drawing.Size(654, 455);
+            this.grBData.Size = new System.Drawing.Size(1163, 434);
             this.grBData.TabIndex = 3;
             this.grBData.TabStop = false;
             // 
-            // dtg_Data
+            // maHH
             // 
-            this.dtg_Data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtg_Data.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtg_Data.Location = new System.Drawing.Point(3, 16);
-            this.dtg_Data.Name = "dtg_Data";
-            this.dtg_Data.Size = new System.Drawing.Size(648, 436);
-            this.dtg_Data.TabIndex = 0;
+            this.maHH.DataPropertyName = "maHH";
+            this.maHH.HeaderText = "Mã hàng hóa";
+            this.maHH.Name = "maHH";
+            this.maHH.Width = 120;
+            // 
+            // tenHH
+            // 
+            this.tenHH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tenHH.DataPropertyName = "tenHH";
+            this.tenHH.HeaderText = "Tên hàng hóa";
+            this.tenHH.Name = "tenHH";
+            // 
+            // tenNCC
+            // 
+            this.tenNCC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tenNCC.DataPropertyName = "tenNCC";
+            this.tenNCC.HeaderText = "Tên nhà cung cấp";
+            this.tenNCC.Name = "tenNCC";
+            // 
+            // soluong
+            // 
+            this.soluong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.soluong.DataPropertyName = "soluong";
+            this.soluong.HeaderText = "Số lượng";
+            this.soluong.Name = "soluong";
             // 
             // uc_ThongKe
             // 
@@ -123,13 +176,14 @@
             this.Controls.Add(this.grBTitle);
             this.Controls.Add(this.menuStrip1);
             this.Name = "uc_ThongKe";
-            this.Size = new System.Drawing.Size(654, 576);
+            this.Size = new System.Drawing.Size(1163, 576);
             this.grBTitle.ResumeLayout(false);
             this.grBTitle.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.grBData.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtg_Data)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtg_HHN_HHX)).EndInit();
+            this.grBData.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,7 +197,12 @@
         private System.Windows.Forms.ToolStripMenuItem btn_HangHoa;
         private System.Windows.Forms.ToolStripMenuItem btn_HangHoaNhap;
         private System.Windows.Forms.ToolStripMenuItem btn_HangHoaXuat;
-        private System.Windows.Forms.GroupBox grBData;
         private System.Windows.Forms.DataGridView dtg_Data;
+        private System.Windows.Forms.DataGridView dtg_HHN_HHX;
+        private System.Windows.Forms.GroupBox grBData;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maHH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenHH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenNCC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soluong;
     }
 }
