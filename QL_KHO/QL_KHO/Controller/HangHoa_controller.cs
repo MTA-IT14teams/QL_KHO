@@ -117,7 +117,7 @@ namespace QL_KHO.Controller
             {
                 new SqlParameter("maHH",ID)
         };
-            return ExcuteSQL("dbo.xoa_HH", para);
+            return ExcuteSQL("dbo.Xoa_HangHoa", para);
         }
 
         public DataTable TimKiemHH(string strTimKiem)

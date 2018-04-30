@@ -48,3 +48,16 @@ delete NCC
 where maNCC = @maNCC
 end
 go
+
+-- thủ tục xóa hàng hóa
+create proc dbo.Xoa_HangHoa(@maHH char(10))
+as
+begin
+delete Chitietnhap
+where maHH = @maHH
+delete Chitietxuat
+where maHH = @maHH
+delete HangHoa
+where maHH = @maHH
+end
+go
