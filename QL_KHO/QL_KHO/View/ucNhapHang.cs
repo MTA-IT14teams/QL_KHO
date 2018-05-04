@@ -55,7 +55,7 @@ namespace QL_KHO.View
         }
         private void ucNhapHang_Load(object sender, EventArgs e)
         {
-            DisEnl(false);
+            //DisEnl(false);
             HienThi();
         }
 
@@ -110,24 +110,27 @@ namespace QL_KHO.View
         {
             if (txtMaPN.Text == "")
             {
-                MessageBox.Show("Bạn chưa nhập mã hàng hóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Bạn chưa nhập mã phiếu nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            int _soLuong;
+
             int _tongtien;
+            int _soLuong;
             int _dongia;
-            DateTime _ngaynhap;
-            int.TryParse(txtSoLuong.Text, out _soLuong);
+
+            // String _ngaynhap = string.Format("dd/MM/yyyy", dtpNgayNhap.Value);
+
             int.TryParse(txtTongTien.Text, out _tongtien);
+            int.TryParse(txtSoLuong.Text, out _soLuong);
             int.TryParse(txtDonGia.Text, out _dongia);
-            DateTime.TryParse(dtpNgayNhap.Text, out _ngaynhap);
+            //  String.Format( "dd/MM/yyyy", out _ngaynhap);
             NH.MaPN = txtMaPN.Text;
-            dtpNgayNhap.Value = _ngaynhap;
+            NH.NgayNhap = dtpNgayNhap.Value;
             NH.TongTien = _tongtien;
             NH.MaCTN = txtMaCTN.Text;
             NH.MaHH = txtMaHH.Text;
             NH.SoLuong = _soLuong;
             NH.DonGia = _dongia;
-            if (txtMaPN.Text != "" && txtTongTien.Text != "" && txtMaCTN.Text != "" && txtMaHH.Text != "" && txtSoLuong.Text != "" && txtDonGia.Text != "" && hanhdong == 0)
+            if (txtMaPN.Text != "" && txtTongTien.Text != "" && txtMaCTN.Text != "" && txtMaHH.Text != "" && txtSoLuong.Text != "" && txtDonGia.Text != "" && dtpNgayNhap.Enabled != true && hanhdong == 0)
             {
                 try
                 {

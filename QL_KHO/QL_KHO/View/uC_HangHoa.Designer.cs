@@ -40,6 +40,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvHangHoa = new System.Windows.Forms.DataGridView();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,11 +59,6 @@
             this.btnsua = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.btnthem = new System.Windows.Forms.Button();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHangHoa)).BeginInit();
@@ -152,6 +152,7 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin hàng hóa";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // groupBox2
             // 
@@ -182,6 +183,40 @@
             this.dgvHangHoa.TabIndex = 0;
             this.dgvHangHoa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHangHoa_CellClick);
             this.dgvHangHoa.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvHangHoa_RowPrePaint);
+            // 
+            // STT
+            // 
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            this.STT.Width = 150;
+            // 
+            // maHH
+            // 
+            this.maHH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.maHH.DataPropertyName = "maHH";
+            this.maHH.HeaderText = "Mã hàng hóa";
+            this.maHH.Name = "maHH";
+            // 
+            // tenHH
+            // 
+            this.tenHH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.tenHH.DataPropertyName = "tenHH";
+            this.tenHH.HeaderText = "Tên hàng hóa";
+            this.tenHH.Name = "tenHH";
+            // 
+            // maNCC
+            // 
+            this.maNCC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.maNCC.DataPropertyName = "maNCC";
+            this.maNCC.HeaderText = "Mã nhà cung cấp";
+            this.maNCC.Name = "maNCC";
+            // 
+            // soluong
+            // 
+            this.soluong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.soluong.DataPropertyName = "soluong";
+            this.soluong.HeaderText = "Số lượng";
+            this.soluong.Name = "soluong";
             // 
             // panel1
             // 
@@ -354,40 +389,6 @@
             this.btnthem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnthem.UseVisualStyleBackColor = false;
             this.btnthem.Click += new System.EventHandler(this.btnthem_Click);
-            // 
-            // STT
-            // 
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            this.STT.Width = 150;
-            // 
-            // maHH
-            // 
-            this.maHH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.maHH.DataPropertyName = "maHH";
-            this.maHH.HeaderText = "Mã hàng hóa";
-            this.maHH.Name = "maHH";
-            // 
-            // tenHH
-            // 
-            this.tenHH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.tenHH.DataPropertyName = "tenHH";
-            this.tenHH.HeaderText = "Tên hàng hóa";
-            this.tenHH.Name = "tenHH";
-            // 
-            // maNCC
-            // 
-            this.maNCC.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.maNCC.DataPropertyName = "maNCC";
-            this.maNCC.HeaderText = "Mã nhà cung cấp";
-            this.maNCC.Name = "maNCC";
-            // 
-            // soluong
-            // 
-            this.soluong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.soluong.DataPropertyName = "soluong";
-            this.soluong.HeaderText = "Số lượng";
-            this.soluong.Name = "soluong";
             // 
             // uC_HangHoa
             // 
