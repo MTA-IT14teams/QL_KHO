@@ -33,7 +33,6 @@ D:\GitHub\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.frmDangNhap.resources
 D:\GitHub\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.frmDangNhap_CSDL.resources
 D:\GitHub\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.Properties.Resources.resources
 D:\GitHub\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.View.frmMain.resources
-D:\GitHub\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.View.ucNhapHang.resources
 D:\GitHub\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.View.uC_HangHoa.resources
 D:\GitHub\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.View.uc_NhaCungCap.resources
 D:\GitHub\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.View.uc_ThongKe.resources
@@ -43,3 +42,4 @@ D:\GitHub\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.csproj.GenerateResource.Cache
 D:\GitHub\QL_KHO\QL_KHO\QL_KHO\bin\Debug\QL_KHO.exe
 D:\GitHub\QL_KHO\QL_KHO\QL_KHO\bin\Debug\QL_KHO.pdb
 D:\GitHub\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.View.uc_XuatHang.resources
+D:\GitHub\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.View.uc_NhapHang.resources

@@ -42,7 +42,7 @@ namespace QL_KHO.View
 
         private void nhậpHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ucNhapHang a = new ucNhapHang();
+            uc_NhapHang a = new uc_NhapHang();
             a.Dock = DockStyle.Fill;
             groupBox1.Controls.Add(a);
             foreach (Control ctrl in groupBox1.Controls)

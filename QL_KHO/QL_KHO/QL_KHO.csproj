@@ -77,12 +77,6 @@
     <Compile Include="View\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\ucNhapHang.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\ucNhapHang.Designer.cs">
-      <DependentUpon>ucNhapHang.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\uC_HangHoa.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -94,6 +88,12 @@
     </Compile>
     <Compile Include="View\uc_NhaCungCap.Designer.cs">
       <DependentUpon>uc_NhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\uc_NhapHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\uc_NhapHang.Designer.cs">
+      <DependentUpon>uc_NhapHang.cs</DependentUpon>
     </Compile>
     <Compile Include="View\uc_ThongKe.cs">
       <SubType>UserControl</SubType>
@@ -138,14 +138,14 @@
     <EmbeddedResource Include="View\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\ucNhapHang.resx">
-      <DependentUpon>ucNhapHang.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\uC_HangHoa.resx">
       <DependentUpon>uC_HangHoa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\uc_NhaCungCap.resx">
       <DependentUpon>uc_NhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\uc_NhapHang.resx">
+      <DependentUpon>uc_NhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\uc_ThongKe.resx">
       <DependentUpon>uc_ThongKe.cs</DependentUpon>

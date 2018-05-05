@@ -12,16 +12,15 @@ using System.Data.SqlClient;
 
 namespace QL_KHO.View
 {
-    public partial class ucNhapHang : UserControl
+    public partial class uc_NhapHang : UserControl
     {
         NhapHang NH = new NhapHang();
         NhapHang_Controller NH_ctl = new NhapHang_Controller();
         private int hanhdong = 1;
-        public ucNhapHang()
+        public uc_NhapHang()
         {
             InitializeComponent();
         }
-
         private void DisEnl(bool e)
         {
             btnThem.Enabled = !e;
@@ -53,9 +52,9 @@ namespace QL_KHO.View
             conn.Open();
             dgvNhapHang.DataSource = NH_ctl.GetData();
         }
-        private void ucNhapHang_Load(object sender, EventArgs e)
+
+        private void uc_NhapHang_Load(object sender, EventArgs e)
         {
-            //DisEnl(false);
             HienThi();
         }
 
@@ -108,73 +107,70 @@ namespace QL_KHO.View
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (txtMaPN.Text == "")
-            {
-                MessageBox.Show("Bạn chưa nhập mã phiếu nhập!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            int _tongtien;
-            int _soLuong;
-            int _dongia;
-
-            // String _ngaynhap = string.Format("dd/MM/yyyy", dtpNgayNhap.Value);
-
-            int.TryParse(txtTongTien.Text, out _tongtien);
-            int.TryParse(txtSoLuong.Text, out _soLuong);
-            int.TryParse(txtDonGia.Text, out _dongia);
-            //  String.Format( "dd/MM/yyyy", out _ngaynhap);
-            NH.MaPN = txtMaPN.Text;
-            NH.NgayNhap = dtpNgayNhap.Value;
-            NH.TongTien = _tongtien;
-            NH.MaCTN = txtMaCTN.Text;
-            NH.MaHH = txtMaHH.Text;
-            NH.SoLuong = _soLuong;
-            NH.DonGia = _dongia;
-            if (txtMaPN.Text != "" && txtTongTien.Text != "" && txtMaCTN.Text != "" && txtMaHH.Text != "" && txtSoLuong.Text != "" && txtDonGia.Text != "" && dtpNgayNhap.Enabled != true && hanhdong == 0)
+            if (hanhdong == 0)
             {
                 try
                 {
-                    //SqlConnection conn = new SqlConnection(Controller.ConnectDatabase.ConnectionString);
-                    //conn.Open();
-                    NH_ctl.InsertData(NH);
-                    MessageBox.Show("Thêm thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    HienThi();
-                    ucNhapHang_Load(sender, e);
-                    SetNull();
-                    DisEnl(false);
-                    hanhdong = 1;
+                    SqlConnection conn = new SqlConnection(Controller.ConnectDatabase.ConnectionString);
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("ThemNH", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@MaPN", txtMaPN.Text.Trim());
+                    ////cmd.Parameters.AddWithValue("@Madv", txtMaDV.Text.Trim());//
+                    // cmd.Parameters.AddWithValue("@Madv", cboDichVu.SelectedValue);
+                    cmd.Parameters.AddWithValue("@NgayNhap", dtpNgayNhap.Value);
 
+                    cmd.Parameters.AddWithValue("@Tongtien", txtTongTien.Text.Trim());
+                    cmd.Parameters.AddWithValue("@MaCTN", txtMaCTN.Text.Trim());
+                    cmd.Parameters.AddWithValue("@MaHH", txtMaHH.Text.Trim());
+                    cmd.Parameters.AddWithValue("@SLuong", txtSoLuong.Text.Trim());
+                    cmd.Parameters.AddWithValue("@DonGia", txtDonGia.Text.Trim());
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Thêm mới thành công");
+
+                    HienThi();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi" + ex.Message);
+                }
+
+            }
+            else if (hanhdong == 1)
+            {
+                try
+                {
+                    SqlConnection conn = new SqlConnection(Controller.ConnectDatabase.ConnectionString);
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("SuaNH", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@MaPN", txtMaPN.Text.Trim());
+                    ////cmd.Parameters.AddWithValue("@Madv", txtMaDV.Text.Trim());//
+                    // cmd.Parameters.AddWithValue("@Madv", cboDichVu.SelectedValue);
+                    cmd.Parameters.AddWithValue("@NgayNhap", dtpNgayNhap.Value);
+
+                    cmd.Parameters.AddWithValue("@Tongtien", txtTongTien.Text.Trim());
+                    cmd.Parameters.AddWithValue("@MaCTN", txtMaCTN.Text.Trim());
+                    cmd.Parameters.AddWithValue("@MaHH", txtMaHH.Text.Trim());
+                    cmd.Parameters.AddWithValue("@SLuong", txtSoLuong.Text.Trim());
+                    cmd.Parameters.AddWithValue("@DonGia", txtDonGia.Text.Trim());
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Sửa thành công");
+                    HienThi();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Lỗi " + ex.Message);
                 }
-                // HienThi();
-            }
-            else if (txtMaPN.Text != "" && txtTongTien.Text != "" && txtMaCTN.Text != "" && txtMaHH.Text != "" && txtSoLuong.Text != "" && txtDonGia.Text != "" && hanhdong != 0)
-            {
-                try
-                {
-                    //SqlConnection conn = new SqlConnection(Controller.ConnectDatabase.ConnectionString);
-                    //conn.Open();
-                    NH_ctl.UpdateData(NH);
-                    MessageBox.Show("Sửa Thành Công ! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    HienThi();
-                    ucNhapHang_Load(sender, e);
-                    SetNull();
-                    DisEnl(false);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi " + ex.Message);
-                }
-                //HienThi();
             }
         }
 
         private void btnRef_Click(object sender, EventArgs e)
         {
             DisEnl(false);
+            btnLuu.Enabled = true;
             HienThi();
         }
 
@@ -193,7 +189,5 @@ namespace QL_KHO.View
                 dgvNhapHang.DataSource = NH_ctl.TimKiemHH("select pn.maPN, ngayNhap, tongTien, maCTN,maHH, soLuong, donGia from PhieuNhap pn, Chitietnhap ct where pn.maPN=ct.maPN and maHH Like '%" + txtTimKiem.Text.Trim() + "%'");
             }
         }
-
-
     }
 }
