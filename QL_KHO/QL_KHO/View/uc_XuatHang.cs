@@ -105,70 +105,66 @@ namespace QL_KHO.View
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (txtMaPX.Text == "")
-            {
-                MessageBox.Show("Bạn chưa nhập mã hàng hóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            int _soLuong;
-            int _tongtien;
-            int _dongia;
-            DateTime _ngayxuat;
-            int.TryParse(txtSoLuong.Text, out _soLuong);
-            int.TryParse(txtTongTien.Text, out _tongtien);
-            int.TryParse(txtDonGia.Text, out _dongia);
-            DateTime.TryParse(dtpNgayXuat.Text, out _ngayxuat);
-            XH.MaPX = txtMaPX.Text;
-            dtpNgayXuat.Value = _ngayxuat;
-            XH.TongTien = _tongtien;
-            XH.MaCTX = txtMaCTX.Text;
-            XH.MaHH = txtMaHH.Text;
-            XH.SoLuong = _soLuong;
-            XH.DonGia = _dongia;
-            if (txtMaPX.Text != "" && txtTongTien.Text != "" && txtMaCTX.Text != "" && txtMaHH.Text != "" && txtSoLuong.Text != "" && txtDonGia.Text != "" && hanhdong == 0)
+            if (hanhdong == 0)
             {
                 try
                 {
-                    //SqlConnection conn = new SqlConnection(Controller.ConnectDatabase.ConnectionString);
-                    //conn.Open();
-                    XH_ctl.InsertData(XH);
-                    MessageBox.Show("Thêm thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    HienThi();
-                    uc_XuatHang_Load(sender, e);
-                    SetNull();
-                    DisEnl(false);
-                    hanhdong = 1;
+                    SqlConnection conn = new SqlConnection(Controller.ConnectDatabase.ConnectionString);
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("ThemXH", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@MaPX", txtMaPX.Text.Trim());
+                    cmd.Parameters.AddWithValue("@NgayXuat", dtpNgayXuat.Value);
 
+                    cmd.Parameters.AddWithValue("@Tongtien", txtTongTien.Text.Trim());
+                    cmd.Parameters.AddWithValue("@MaCTX", txtMaCTX.Text.Trim());
+                    cmd.Parameters.AddWithValue("@MaHH", txtMaHH.Text.Trim());
+                    cmd.Parameters.AddWithValue("@SLuong", txtSoLuong.Text.Trim());
+                    cmd.Parameters.AddWithValue("@DonGia", txtDonGia.Text.Trim());
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Thêm mới thành công");
+
+                    HienThi();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi " + ex.Message);
+                    MessageBox.Show("Lỗi" + ex.Message);
                 }
-                // HienThi();
+
             }
-            else if (txtMaPX.Text != "" && txtTongTien.Text != "" && txtMaCTX.Text != "" && txtMaHH.Text != "" && txtSoLuong.Text != "" && txtDonGia.Text != "" && hanhdong != 0)
+            else if (hanhdong == 1)
             {
                 try
                 {
-                    //SqlConnection conn = new SqlConnection(Controller.ConnectDatabase.ConnectionString);
-                    //conn.Open();
-                    XH_ctl.UpdateData(XH);
-                    MessageBox.Show("Sửa Thành Công ! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    SqlConnection conn = new SqlConnection(Controller.ConnectDatabase.ConnectionString);
+                    conn.Open();
+                    SqlCommand cmd = new SqlCommand("SuaXH", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@MaPX", txtMaPX.Text.Trim());
+                    cmd.Parameters.AddWithValue("@NgayXuat", dtpNgayXuat.Value);
+
+                    cmd.Parameters.AddWithValue("@Tongtien", txtTongTien.Text.Trim());
+                    cmd.Parameters.AddWithValue("@MaCTX", txtMaCTX.Text.Trim());
+                    cmd.Parameters.AddWithValue("@MaHH", txtMaHH.Text.Trim());
+                    cmd.Parameters.AddWithValue("@SLuong", txtSoLuong.Text.Trim());
+                    cmd.Parameters.AddWithValue("@DonGia", txtDonGia.Text.Trim());
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Sửa thành công");
                     HienThi();
-                    uc_XuatHang_Load(sender, e);
-                    SetNull();
-                    DisEnl(false);
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Lỗi " + ex.Message);
                 }
-                //HienThi();
             }
         }
 
         private void btnRef_Click(object sender, EventArgs e)
         {
             DisEnl(false);
+            btnLuu.Enabled = true;
             HienThi();
         }
 
