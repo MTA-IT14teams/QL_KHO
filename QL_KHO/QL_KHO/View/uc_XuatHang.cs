@@ -159,6 +159,9 @@ namespace QL_KHO.View
                     MessageBox.Show("Lỗi " + ex.Message);
                 }
             }
+            btnThem.Enabled = true;
+            btnSua.Enabled = true;
+            btnXoa.Enabled = true;
         }
 
         private void btnRef_Click(object sender, EventArgs e)
@@ -168,22 +171,22 @@ namespace QL_KHO.View
             HienThi();
         }
 
-        private void btnTimKiem_Click(object sender, EventArgs e)
+       
+
+        private void btnTimKiem_Click_1(object sender, EventArgs e)
         {
             if (cboTimKiem.Text == "Mã Phiếu Xuất")
             {
-                dgvXuatHang.DataSource = XH_ctl.TimKiemHH("select px.maPX, ngayXuat, tongTien, maCTX,maHH, soLuong, donGia from PhieuXuat px, Chitietnhap ct where px.maPX=ct.maPX and px.maPX Like '%" + txtTimKiem.Text.Trim() + "%'");
+                dgvXuatHang.DataSource = XH_ctl.TimKiemHH("select px.maPX, ngayXuat, tongTien, maCTX, maHH, soLuong, donGia from PhieuXuat px, Chitietxuat ct where px.maPX=ct.maPX and px.maPX Like '%" + txtTimKiem.Text.Trim() + "%'");
             }
-            if (cboTimKiem.Text == "Mã CTN")
+            if (cboTimKiem.Text == "Mã CTX")
             {
-                dgvXuatHang.DataSource = XH_ctl.TimKiemHH("select px.maPX, ngayXuat, tongTien, maCTX,maHH, soLuong, donGia from PhieuXuat px, Chitietnhap ct where px.maPX=ct.maPX and maCTX Like '%" + txtTimKiem.Text.Trim() + "%'");
+                dgvXuatHang.DataSource = XH_ctl.TimKiemHH("select px.maPX, ngayXuat, tongTien, maCTX, maHH, soLuong, donGia from PhieuXuat px, Chitietxuat ct where px.maPX=ct.maPX and maCTX Like '%" + txtTimKiem.Text.Trim() + "%'");
             }
             if (cboTimKiem.Text == "Mã Hàng Hóa")
             {
-                dgvXuatHang.DataSource = XH_ctl.TimKiemHH("select px.maPX, ngayXuat, tongTien, maCTX,maHH, soLuong, donGia from PhieuXuat px, Chitietnhap ct where px.maPX=ct.maPX and maHH Like '%" + txtTimKiem.Text.Trim() + "%'");
+                dgvXuatHang.DataSource = XH_ctl.TimKiemHH("select px.maPX, ngayXuat, tongTien, maCTX, maHH, soLuong, donGia from PhieuXuat px, Chitietxuat ct where px.maPX=ct.maPX and maHH Like '%" + txtTimKiem.Text.Trim() + "%'");
             }
         }
-
-
     }
 }

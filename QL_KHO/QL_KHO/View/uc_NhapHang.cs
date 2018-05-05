@@ -165,6 +165,9 @@ namespace QL_KHO.View
                     MessageBox.Show("Lỗi " + ex.Message);
                 }
             }
+            btnThem.Enabled = true;
+            btnSua.Enabled = true;
+            btnXoa.Enabled = true;
         }
 
         private void btnRef_Click(object sender, EventArgs e)

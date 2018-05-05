@@ -76,7 +76,7 @@
             this.maHH,
             this.soLuong,
             this.donGia});
-            this.dgvXuatHang.Location = new System.Drawing.Point(395, 101);
+            this.dgvXuatHang.Location = new System.Drawing.Point(399, 118);
             this.dgvXuatHang.Name = "dgvXuatHang";
             this.dgvXuatHang.Size = new System.Drawing.Size(736, 389);
             this.dgvXuatHang.TabIndex = 115;
@@ -217,7 +217,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(46, 69);
+            this.groupBox1.Location = new System.Drawing.Point(50, 86);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(313, 380);
             this.groupBox1.TabIndex = 116;
@@ -282,7 +282,7 @@
             "Mã Phiếu Xuất",
             "Mã CTX",
             "Mã Hàng Hóa"});
-            this.cboTimKiem.Location = new System.Drawing.Point(917, -4);
+            this.cboTimKiem.Location = new System.Drawing.Point(921, 13);
             this.cboTimKiem.Name = "cboTimKiem";
             this.cboTimKiem.Size = new System.Drawing.Size(197, 21);
             this.cboTimKiem.TabIndex = 122;
@@ -291,7 +291,7 @@
             // txtTimKiem
             // 
             this.txtTimKiem.ForeColor = System.Drawing.Color.Black;
-            this.txtTimKiem.Location = new System.Drawing.Point(917, 34);
+            this.txtTimKiem.Location = new System.Drawing.Point(921, 51);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(127, 20);
             this.txtTimKiem.TabIndex = 123;
@@ -302,7 +302,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(133, 5);
+            this.label8.Location = new System.Drawing.Point(137, 22);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(161, 29);
             this.label8.TabIndex = 121;
@@ -311,13 +311,13 @@
             // btnTimKiem
             // 
             this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiem.Location = new System.Drawing.Point(1050, 34);
+            this.btnTimKiem.Location = new System.Drawing.Point(1054, 51);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(81, 23);
             this.btnTimKiem.TabIndex = 124;
             this.btnTimKiem.Text = "Tìm Kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
-            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click_1);
             // 
             // btnRef
             // 
@@ -325,7 +325,7 @@
             this.btnRef.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRef.Image = ((System.Drawing.Image)(resources.GetObject("btnRef.Image")));
             this.btnRef.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRef.Location = new System.Drawing.Point(788, 23);
+            this.btnRef.Location = new System.Drawing.Point(792, 40);
             this.btnRef.Name = "btnRef";
             this.btnRef.Size = new System.Drawing.Size(107, 40);
             this.btnRef.TabIndex = 117;
@@ -340,7 +340,7 @@
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(591, 20);
+            this.btnXoa.Location = new System.Drawing.Point(595, 37);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(82, 40);
             this.btnXoa.TabIndex = 118;
@@ -356,7 +356,7 @@
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(484, 23);
+            this.btnSua.Location = new System.Drawing.Point(488, 40);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(86, 40);
             this.btnSua.TabIndex = 119;
@@ -372,7 +372,7 @@
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuu.Location = new System.Drawing.Point(689, 20);
+            this.btnLuu.Location = new System.Drawing.Point(693, 37);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(80, 40);
             this.btnLuu.TabIndex = 125;
@@ -387,7 +387,7 @@
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(377, 23);
+            this.btnThem.Location = new System.Drawing.Point(381, 40);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(90, 40);
             this.btnThem.TabIndex = 120;
@@ -413,7 +413,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnTimKiem);
             this.Name = "uc_XuatHang";
-            this.Size = new System.Drawing.Size(1177, 487);
+            this.Size = new System.Drawing.Size(1177, 559);
             this.Load += new System.EventHandler(this.uc_XuatHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvXuatHang)).EndInit();
             this.groupBox1.ResumeLayout(false);
