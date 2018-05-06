@@ -52,6 +52,23 @@ namespace QL_KHO.View
             conn.Open();
             dgvNhapHang.DataSource = NH_ctl.GetData();
         }
+        //private void Tongtien()
+        //{
+        //    SqlConnection conn = new SqlConnection(Controller.ConnectDatabase.ConnectionString);
+        //    conn.Open();
+        //    SqlCommand cmd = new SqlCommand("XemNH1", conn);
+        //    cmd.CommandType = CommandType.StoredProcedure;
+        //    cmd.Parameters.Add("@MaPN", txtMaPN.Text.Trim());
+        //    SqlDataAdapter da = new SqlDataAdapter(cmd);
+        //    DataTable dt = new DataTable();
+        //    da.Fill(dt);
+
+        //    int sl = Convert.ToInt32(txtSoLuong.Text);
+        //    int dongia = Convert.ToInt32(txtDonGia.Text);
+
+        //    int tongtien = sl * dongia;
+        //    txtTongTien.Text = tongtien.ToString();
+        //}
 
         private void uc_NhapHang_Load(object sender, EventArgs e)
         {
@@ -192,5 +209,10 @@ namespace QL_KHO.View
                 dgvNhapHang.DataSource = NH_ctl.TimKiemHH("select pn.maPN, ngayNhap, tongTien, maCTN,maHH, soLuong, donGia from PhieuNhap pn, Chitietnhap ct where pn.maPN=ct.maPN and maHH Like '%" + txtTimKiem.Text.Trim() + "%'");
             }
         }
+
+        //private void txtTongTien_MouseClick(object sender, MouseEventArgs e)
+        //{
+        //    Tongtien();
+        //}
     }
 }

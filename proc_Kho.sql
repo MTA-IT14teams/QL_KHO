@@ -45,8 +45,22 @@ as
 begin
 select pn.maPN, ngayNhap, tongTien, maCTN,maHH, soLuong, donGia
 from PhieuNhap pn, Chitietnhap ct
-where pn.maPN=ct.maPN
+where pn.maPN=ct.maPN 
 end
+go
+
+
+
+create proc XemNH1(@MaPN nchar(10))
+as
+begin
+select pn.maPN, ngayNhap, tongTien, maCTN,maHH, soLuong, donGia
+from PhieuNhap pn, Chitietnhap ct
+where pn.maPN=ct.maPN and @MaPN=pn.maPN
+end
+go
+
+XemNH '001'
 go
 
 
