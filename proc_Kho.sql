@@ -4,7 +4,7 @@ where pn.maPN=ct.maPN
 go
 
 
-alter proc ThemNH(@MaPN char(10), @NgayNhap date, @Tongtien int, @MaCTN char(10), @MaHH char(10), @SLuong int, @DonGia int)
+alter proc ThemNH(@MaPN char(10), @NgayNhap date, @Tongtien money, @MaCTN char(10), @MaHH char(10), @SLuong int, @DonGia money)
 as
 begin
 insert into PhieuNhap(maPN, ngayNhap, tongTien)
@@ -16,7 +16,7 @@ values (@MaCTN,@MaPN, @MaHH, @SLuong, @DonGia)
 end
 go
 
-alter proc SuaNH(@MaPN char(10), @NgayNhap date, @Tongtien int, @MaCTN char(10), @MaHH char(10), @SLuong int, @DonGia int)
+alter proc SuaNH(@MaPN char(10), @NgayNhap date, @Tongtien money, @MaCTN char(10), @MaHH char(10), @SLuong int, @DonGia money)
 as
 begin
 update PhieuNhap
@@ -69,7 +69,7 @@ from PhieuXuat px, Chitietxuat ct
 where px.maPX=ct.maPX
 go
 
-create proc ThemXH(@MaPX char(10), @NgayXuat date, @Tongtien int, @MaCTX char(10), @MaHH char(10), @SLuong int, @DonGia int)
+alter proc ThemXH(@MaPX char(10), @NgayXuat date, @Tongtien money, @MaCTX char(10), @MaHH char(10), @SLuong int, @DonGia money)
 as
 begin
 insert into PhieuXuat(maPX, ngayXuat, tongTien)
@@ -82,7 +82,7 @@ end
 go
 
 
-create proc SuaXH(@MaPX char(10), @NgayXuat date, @Tongtien int, @MaCTX char(10), @MaHH char(10), @SLuong int, @DonGia int)
+alter proc SuaXH(@MaPX char(10), @NgayXuat date, @Tongtien money, @MaCTX char(10), @MaHH char(10), @SLuong int, @DonGia money)
 as
 begin
 update PhieuXuat

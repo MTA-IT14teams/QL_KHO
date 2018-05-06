@@ -51,6 +51,25 @@ namespace QL_KHO.View
             conn.Open();
             dgvXuatHang.DataSource = XH_ctl.GetData();
         }
+
+        private void Tongtien()
+        {
+            SqlConnection conn = new SqlConnection(Controller.ConnectDatabase.ConnectionString);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("XemXH1", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@MaPX", txtMaPX.Text.Trim());
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            int sl = Convert.ToInt32(txtSoLuong.Text);
+            int dongia = Convert.ToInt32(txtDonGia.Text);
+
+            int tongtien = sl * dongia;
+            txtTongTien.Text = tongtien.ToString();
+        }
+
         private void uc_XuatHang_Load(object sender, EventArgs e)
         {
             HienThi();
@@ -187,6 +206,11 @@ namespace QL_KHO.View
             {
                 dgvXuatHang.DataSource = XH_ctl.TimKiemHH("select px.maPX, ngayXuat, tongTien, maCTX, maHH, soLuong, donGia from PhieuXuat px, Chitietxuat ct where px.maPX=ct.maPX and maHH Like '%" + txtTimKiem.Text.Trim() + "%'");
             }
+        }
+
+        private void txtTongTien_MouseClick(object sender, MouseEventArgs e)
+        {
+            Tongtien();
         }
     }
 }
