@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_XuatHang));
             this.dgvXuatHang = new System.Windows.Forms.DataGridView();
+            this.maPX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maCTX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtpNgayXuat = new System.Windows.Forms.DateTimePicker();
             this.txtDonGia = new System.Windows.Forms.TextBox();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
@@ -54,12 +60,6 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.maPX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngayXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maCTX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.donGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvXuatHang)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -79,9 +79,51 @@
             this.donGia});
             this.dgvXuatHang.Location = new System.Drawing.Point(399, 118);
             this.dgvXuatHang.Name = "dgvXuatHang";
-            this.dgvXuatHang.Size = new System.Drawing.Size(736, 441);
+            this.dgvXuatHang.Size = new System.Drawing.Size(778, 441);
             this.dgvXuatHang.TabIndex = 115;
             this.dgvXuatHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvXuatHang_CellClick);
+            // 
+            // maPX
+            // 
+            this.maPX.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.maPX.DataPropertyName = "maPX";
+            this.maPX.HeaderText = "Mã Phiếu Xuất";
+            this.maPX.Name = "maPX";
+            // 
+            // ngayXuat
+            // 
+            this.ngayXuat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ngayXuat.DataPropertyName = "ngayXuat";
+            this.ngayXuat.HeaderText = "Ngày Xuất";
+            this.ngayXuat.Name = "ngayXuat";
+            // 
+            // maCTX
+            // 
+            this.maCTX.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.maCTX.DataPropertyName = "maCTX";
+            this.maCTX.HeaderText = "Mã CTX";
+            this.maCTX.Name = "maCTX";
+            // 
+            // maHH
+            // 
+            this.maHH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.maHH.DataPropertyName = "maHH";
+            this.maHH.HeaderText = "Mã Hàng Hóa";
+            this.maHH.Name = "maHH";
+            // 
+            // soLuong
+            // 
+            this.soLuong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.soLuong.DataPropertyName = "soLuong";
+            this.soLuong.HeaderText = "Số Lượng ";
+            this.soLuong.Name = "soLuong";
+            // 
+            // donGia
+            // 
+            this.donGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.donGia.DataPropertyName = "donGia";
+            this.donGia.HeaderText = "Đơn Giá";
+            this.donGia.Name = "donGia";
             // 
             // dtpNgayXuat
             // 
@@ -112,6 +154,7 @@
             this.txtMaCTX.Name = "txtMaCTX";
             this.txtMaCTX.Size = new System.Drawing.Size(150, 22);
             this.txtMaCTX.TabIndex = 1;
+            this.txtMaCTX.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtMaCTX_MouseClick);
             // 
             // txtTongTien
             // 
@@ -279,7 +322,7 @@
             // 
             // btnRef
             // 
-            this.btnRef.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnRef.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnRef.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRef.Image = ((System.Drawing.Image)(resources.GetObject("btnRef.Image")));
             this.btnRef.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -294,7 +337,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnXoa.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -310,7 +353,7 @@
             // 
             // btnSua
             // 
-            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnSua.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -326,7 +369,7 @@
             // 
             // btnLuu
             // 
-            this.btnLuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnLuu.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -341,7 +384,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnThem.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -354,48 +397,6 @@
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // maPX
-            // 
-            this.maPX.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.maPX.DataPropertyName = "maPX";
-            this.maPX.HeaderText = "Mã Phiếu Xuất";
-            this.maPX.Name = "maPX";
-            // 
-            // ngayXuat
-            // 
-            this.ngayXuat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ngayXuat.DataPropertyName = "ngayXuat";
-            this.ngayXuat.HeaderText = "Ngày Xuất";
-            this.ngayXuat.Name = "ngayXuat";
-            // 
-            // maCTX
-            // 
-            this.maCTX.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.maCTX.DataPropertyName = "maCTX";
-            this.maCTX.HeaderText = "Mã CTX";
-            this.maCTX.Name = "maCTX";
-            // 
-            // maHH
-            // 
-            this.maHH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.maHH.DataPropertyName = "maHH";
-            this.maHH.HeaderText = "Mã Hàng Hóa";
-            this.maHH.Name = "maHH";
-            // 
-            // soLuong
-            // 
-            this.soLuong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.soLuong.DataPropertyName = "soLuong";
-            this.soLuong.HeaderText = "Số Lượng ";
-            this.soLuong.Name = "soLuong";
-            // 
-            // donGia
-            // 
-            this.donGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.donGia.DataPropertyName = "donGia";
-            this.donGia.HeaderText = "Đơn Giá";
-            this.donGia.Name = "donGia";
             // 
             // uc_XuatHang
             // 

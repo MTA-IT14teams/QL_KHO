@@ -70,8 +70,72 @@ namespace QL_KHO.View
             txtTongTien.Text = tongtien.ToString();
         }
 
+        private void MaCTN()
+        {
+            SqlConnection conn = new SqlConnection(Controller.ConnectDatabase.ConnectionString);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("XemNH1", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@MaPN", txtMaPN.Text.Trim());
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+          
+            txtMaCTN.Text = txtMaPN.Text;
+        }
+
+        public string TangMa()
+        {
+            SqlConnection conn = new SqlConnection(Controller.ConnectDatabase.ConnectionString);
+            conn.Open();
+            string sql = "select pn.maPN, ngayNhap, tongTien, maCTN,maHH, soLuong, donGia from PhieuNhap pn, Chitietnhap ct where pn.maPN = ct.maPN";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            string ma = "";
+            if (dt.Rows.Count <= 0)
+            {
+                ma = "001";
+            }
+            else
+            {
+                int k;
+                ma = "0";
+                k = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(2, 2));
+                k = k + 1;
+                if (k < 10)
+                {
+                    if(dt.Rows.Count<10)
+                    {
+                        ma = ma + "0";
+                    }
+                    else if(dt.Rows.Count<20)
+                    {
+                        ma = ma + "1";
+                    }
+                    else if (dt.Rows.Count < 30)
+                    {
+                        ma = ma + "2";
+                    }
+                    else if (dt.Rows.Count < 40)
+                    {
+                        ma = ma + "3";
+                    }
+
+                }
+              
+                ma = ma + k.ToString();
+            }
+           
+
+            return ma;
+        }
         private void uc_NhapHang_Load(object sender, EventArgs e)
         {
+            DisEnl(false);
             HienThi();
         }
 
@@ -91,9 +155,11 @@ namespace QL_KHO.View
         private void btnThem_Click(object sender, EventArgs e)
         {
             hanhdong = 0;
-            this.txtMaPN.Focus();
+           
             SetNull();
             DisEnl(true);
+           txtMaPN.Text = TangMa();
+            txtMaPN.Enabled = false;
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -213,6 +279,11 @@ namespace QL_KHO.View
         private void txtTongTien_MouseClick(object sender, MouseEventArgs e)
         {
             Tongtien();
+        }
+
+        private void txtMaCTN_MouseClick(object sender, MouseEventArgs e)
+        {
+            MaCTN();
         }
 
         //private void txtTongTien_MouseClick(object sender, MouseEventArgs e)
