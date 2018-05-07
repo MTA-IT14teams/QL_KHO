@@ -56,7 +56,6 @@
             this.dgvNhapHang = new System.Windows.Forms.DataGridView();
             this.maPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngayNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maCTN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -143,6 +142,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.groupBox1.Controls.Add(this.dtpNgayNhap);
             this.groupBox1.Controls.Add(this.txtDonGia);
@@ -161,7 +162,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(4, 87);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(313, 374);
+            this.groupBox1.Size = new System.Drawing.Size(326, 437);
             this.groupBox1.TabIndex = 116;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập Hàng";
@@ -337,63 +338,61 @@
             // 
             // dgvNhapHang
             // 
+            this.dgvNhapHang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvNhapHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNhapHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maPN,
             this.ngayNhap,
-            this.tongTien,
             this.maCTN,
             this.maHH,
             this.soLuong,
             this.donGia});
             this.dgvNhapHang.Location = new System.Drawing.Point(353, 119);
             this.dgvNhapHang.Name = "dgvNhapHang";
-            this.dgvNhapHang.Size = new System.Drawing.Size(736, 389);
+            this.dgvNhapHang.Size = new System.Drawing.Size(782, 405);
             this.dgvNhapHang.TabIndex = 115;
             this.dgvNhapHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhapHang_CellClick);
             // 
             // maPN
             // 
+            this.maPN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.maPN.DataPropertyName = "maPN";
             this.maPN.HeaderText = "Mã Phiếu Nhập";
             this.maPN.Name = "maPN";
-            this.maPN.Width = 90;
             // 
             // ngayNhap
             // 
+            this.ngayNhap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ngayNhap.DataPropertyName = "ngayNhap";
             this.ngayNhap.HeaderText = "Ngày Nhập";
             this.ngayNhap.Name = "ngayNhap";
-            this.ngayNhap.Width = 120;
-            // 
-            // tongTien
-            // 
-            this.tongTien.DataPropertyName = "tongTien";
-            this.tongTien.HeaderText = "Tổng Tiền";
-            this.tongTien.Name = "tongTien";
-            this.tongTien.Width = 90;
             // 
             // maCTN
             // 
+            this.maCTN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.maCTN.DataPropertyName = "maCTN";
             this.maCTN.HeaderText = "Mã CTN";
             this.maCTN.Name = "maCTN";
-            this.maCTN.Width = 80;
             // 
             // maHH
             // 
+            this.maHH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.maHH.DataPropertyName = "maHH";
             this.maHH.HeaderText = "Mã Hàng Hóa";
             this.maHH.Name = "maHH";
             // 
             // soLuong
             // 
+            this.soLuong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.soLuong.DataPropertyName = "soLuong";
             this.soLuong.HeaderText = "Số Lượng ";
             this.soLuong.Name = "soLuong";
             // 
             // donGia
             // 
+            this.donGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.donGia.DataPropertyName = "donGia";
             this.donGia.HeaderText = "Đơn Giá";
             this.donGia.Name = "donGia";
@@ -453,7 +452,6 @@
         private System.Windows.Forms.DataGridView dgvNhapHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn maPN;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngayNhap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tongTien;
         private System.Windows.Forms.DataGridViewTextBoxColumn maCTN;
         private System.Windows.Forms.DataGridViewTextBoxColumn maHH;
         private System.Windows.Forms.DataGridViewTextBoxColumn soLuong;

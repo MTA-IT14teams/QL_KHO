@@ -50,13 +50,13 @@
             // lbForgetAccount
             // 
             this.lbForgetAccount.AutoSize = true;
-            this.lbForgetAccount.Location = new System.Drawing.Point(212, 266);
+            this.lbForgetAccount.Location = new System.Drawing.Point(238, 264);
             this.lbForgetAccount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbForgetAccount.Name = "lbForgetAccount";
-            this.lbForgetAccount.Size = new System.Drawing.Size(96, 13);
+            this.lbForgetAccount.Size = new System.Drawing.Size(91, 13);
             this.lbForgetAccount.TabIndex = 12;
             this.lbForgetAccount.TabStop = true;
-            this.lbForgetAccount.Text = "Quyên Tài Khoản?";
+            this.lbForgetAccount.Text = "Quên Tài Khoản?";
             // 
             // cbShowPass
             // 

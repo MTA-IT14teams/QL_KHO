@@ -29,7 +29,7 @@ namespace QL_KHO.View
 
         private void txt_TenHH_TextChanged(object sender, EventArgs e)
         {
-            string tenhh = string.Format("[Tên hàng hóa] like '%{0}%'", txt_TenHH.Text);
+            string tenhh = string.Format("[tenHH] like '%{0}%'", txt_TenHH.Text);
             dt.DefaultView.RowFilter = tenhh;
         }
 
@@ -45,7 +45,7 @@ namespace QL_KHO.View
 
         private void txt_TenNCC_TextChanged(object sender, EventArgs e)
         {
-            string tenncc = string.Format("[Tên NCC] like '%{0}%'",txt_TenNCC.Text);
+            string tenncc = string.Format("[tenNCC] like '%{0}%'",txt_TenNCC.Text);
             dt.DefaultView.RowFilter = tenncc;
         }       
 
