@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbochartModelStoreContainer" CdmEntityContainer="ChartEntities">
+    <EntitySetMapping Name="Chitietnhaps">
+      <EntityTypeMapping TypeName="dbochartModel.Chitietnhap">
+        <MappingFragment StoreEntitySet="Chitietnhap">
+          <ScalarProperty Name="maCTN" ColumnName="maCTN" />
+          <ScalarProperty Name="maPN" ColumnName="maPN" />
+          <ScalarProperty Name="maHH" ColumnName="maHH" />
+          <ScalarProperty Name="soLuong" ColumnName="soLuong" />
+          <ScalarProperty Name="donGia" ColumnName="donGia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Chitietxuats">
+      <EntityTypeMapping TypeName="dbochartModel.Chitietxuat">
+        <MappingFragment StoreEntitySet="Chitietxuat">
+          <ScalarProperty Name="maCTX" ColumnName="maCTX" />
+          <ScalarProperty Name="maPX" ColumnName="maPX" />
+          <ScalarProperty Name="maHH" ColumnName="maHH" />
+          <ScalarProperty Name="soLuong" ColumnName="soLuong" />
+          <ScalarProperty Name="donGia" ColumnName="donGia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HangHoas">
+      <EntityTypeMapping TypeName="dbochartModel.HangHoa">
+        <MappingFragment StoreEntitySet="HangHoa">
+          <ScalarProperty Name="maHH" ColumnName="maHH" />
+          <ScalarProperty Name="tenHH" ColumnName="tenHH" />
+          <ScalarProperty Name="maNCC" ColumnName="maNCC" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NCCs">
+      <EntityTypeMapping TypeName="dbochartModel.NCC">
+        <MappingFragment StoreEntitySet="NCC">
+          <ScalarProperty Name="maNCC" ColumnName="maNCC" />
+          <ScalarProperty Name="tenNCC" ColumnName="tenNCC" />
+          <ScalarProperty Name="diaChi" ColumnName="diaChi" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="email" ColumnName="email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhieuNhaps">
+      <EntityTypeMapping TypeName="dbochartModel.PhieuNhap">
+        <MappingFragment StoreEntitySet="PhieuNhap">
+          <ScalarProperty Name="maPN" ColumnName="maPN" />
+          <ScalarProperty Name="ngayNhap" ColumnName="ngayNhap" />
+          <ScalarProperty Name="tongTien" ColumnName="tongTien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhieuXuats">
+      <EntityTypeMapping TypeName="dbochartModel.PhieuXuat">
+        <MappingFragment StoreEntitySet="PhieuXuat">
+          <ScalarProperty Name="maPX" ColumnName="maPX" />
+          <ScalarProperty Name="ngayXuat" ColumnName="ngayXuat" />
+          <ScalarProperty Name="tongTien" ColumnName="tongTien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaiKhoans">
+      <EntityTypeMapping TypeName="dbochartModel.TaiKhoan">
+        <MappingFragment StoreEntitySet="TaiKhoan">
+          <ScalarProperty Name="acc" ColumnName="acc" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

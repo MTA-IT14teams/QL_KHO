@@ -100,9 +100,21 @@ namespace QL_KHO.View
             }
         }
 
-        private void thốngKêToolStripMenuItem_Click(object sender, EventArgs e)
+        private void thốngKêHàngHóaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             uc_ThongKe a = new uc_ThongKe();
+            a.Dock = DockStyle.Fill;
+            groupBox1.Controls.Add(a);
+            foreach (Control ctrl in groupBox1.Controls)
+            {
+                if (ctrl != a)
+                    ctrl.Dispose();
+            }
+        }
+
+        private void thốngKêNhậpXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            uc_ThongKeNhapXuat a = new uc_ThongKeNhapXuat();
             a.Dock = DockStyle.Fill;
             groupBox1.Controls.Add(a);
             foreach (Control ctrl in groupBox1.Controls)

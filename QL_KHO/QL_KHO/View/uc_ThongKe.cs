@@ -31,16 +31,5 @@ namespace QL_KHO.View
             dtg_HHN_HHX.DataSource = dt;
         }
 
-        private void btn_HangHoaXuat_Click(object sender, EventArgs e)
-        {
-            dt = TK.GetData_proc("tk_xuat");
-            dtg_HHN_HHX.DataSource = dt;
-        }
-
-        private void dtg_HHN_HHX_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
     }
 }

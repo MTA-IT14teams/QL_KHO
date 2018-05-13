@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbochartModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Chitietnhap">
+    <Key>
+      <PropertyRef Name="maCTN" />
+    </Key>
+    <Property Name="maCTN" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="maPN" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="maHH" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="soLuong" Type="Int32" />
+    <Property Name="donGia" Type="Int32" />
+    <NavigationProperty Name="HangHoa" Relationship="Self.FK__Chitietnha__maHH__0CBAE877" FromRole="Chitietnhap" ToRole="HangHoa" />
+    <NavigationProperty Name="HangHoa1" Relationship="Self.FK__Chitietnha__maHH__33D4B598" FromRole="Chitietnhap" ToRole="HangHoa" />
+    <NavigationProperty Name="PhieuNhap" Relationship="Self.FK__Chitietnha__maPN__0DAF0CB0" FromRole="Chitietnhap" ToRole="PhieuNhap" />
+    <NavigationProperty Name="PhieuNhap1" Relationship="Self.FK__Chitietnha__maPN__34C8D9D1" FromRole="Chitietnhap" ToRole="PhieuNhap" />
+  </EntityType>
+  <EntityType Name="Chitietxuat">
+    <Key>
+      <PropertyRef Name="maCTX" />
+    </Key>
+    <Property Name="maCTX" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="maPX" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="maHH" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="soLuong" Type="Int32" />
+    <Property Name="donGia" Type="Int32" />
+    <NavigationProperty Name="HangHoa" Relationship="Self.FK__Chitietxua__maHH__0EA330E9" FromRole="Chitietxuat" ToRole="HangHoa" />
+    <NavigationProperty Name="HangHoa1" Relationship="Self.FK__Chitietxua__maHH__35BCFE0A" FromRole="Chitietxuat" ToRole="HangHoa" />
+    <NavigationProperty Name="PhieuXuat" Relationship="Self.FK__Chitietxua__maPX__0F975522" FromRole="Chitietxuat" ToRole="PhieuXuat" />
+    <NavigationProperty Name="PhieuXuat1" Relationship="Self.FK__Chitietxua__maPX__36B12243" FromRole="Chitietxuat" ToRole="PhieuXuat" />
+  </EntityType>
+  <EntityType Name="HangHoa">
+    <Key>
+      <PropertyRef Name="maHH" />
+    </Key>
+    <Property Name="maHH" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="tenHH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="maNCC" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="soluong" Type="Int32" />
+    <NavigationProperty Name="Chitietnhaps" Relationship="Self.FK__Chitietnha__maHH__0CBAE877" FromRole="HangHoa" ToRole="Chitietnhap" />
+    <NavigationProperty Name="Chitietnhaps1" Relationship="Self.FK__Chitietnha__maHH__33D4B598" FromRole="HangHoa" ToRole="Chitietnhap" />
+    <NavigationProperty Name="Chitietxuats" Relationship="Self.FK__Chitietxua__maHH__0EA330E9" FromRole="HangHoa" ToRole="Chitietxuat" />
+    <NavigationProperty Name="Chitietxuats1" Relationship="Self.FK__Chitietxua__maHH__35BCFE0A" FromRole="HangHoa" ToRole="Chitietxuat" />
+    <NavigationProperty Name="NCC" Relationship="Self.FK__HangHoa__maNCC__108B795B" FromRole="HangHoa" ToRole="NCC" />
+    <NavigationProperty Name="NCC1" Relationship="Self.FK__HangHoa__maNCC__37A5467C" FromRole="HangHoa" ToRole="NCC" />
+  </EntityType>
+  <EntityType Name="NCC">
+    <Key>
+      <PropertyRef Name="maNCC" />
+    </Key>
+    <Property Name="maNCC" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="tenNCC" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="diaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SDT" Type="String" MaxLength="13" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="HangHoas" Relationship="Self.FK__HangHoa__maNCC__108B795B" FromRole="NCC" ToRole="HangHoa" />
+    <NavigationProperty Name="HangHoas1" Relationship="Self.FK__HangHoa__maNCC__37A5467C" FromRole="NCC" ToRole="HangHoa" />
+  </EntityType>
+  <EntityType Name="PhieuNhap">
+    <Key>
+      <PropertyRef Name="maPN" />
+    </Key>
+    <Property Name="maPN" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ngayNhap" Type="DateTime" Precision="0" />
+    <Property Name="tongTien" Type="Int32" />
+    <NavigationProperty Name="Chitietnhaps" Relationship="Self.FK__Chitietnha__maPN__0DAF0CB0" FromRole="PhieuNhap" ToRole="Chitietnhap" />
+    <NavigationProperty Name="Chitietnhaps1" Relationship="Self.FK__Chitietnha__maPN__34C8D9D1" FromRole="PhieuNhap" ToRole="Chitietnhap" />
+  </EntityType>
+  <EntityType Name="PhieuXuat">
+    <Key>
+      <PropertyRef Name="maPX" />
+    </Key>
+    <Property Name="maPX" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="ngayXuat" Type="DateTime" Precision="0" />
+    <Property Name="tongTien" Type="Int32" />
+    <NavigationProperty Name="Chitietxuats" Relationship="Self.FK__Chitietxua__maPX__0F975522" FromRole="PhieuXuat" ToRole="Chitietxuat" />
+    <NavigationProperty Name="Chitietxuats1" Relationship="Self.FK__Chitietxua__maPX__36B12243" FromRole="PhieuXuat" ToRole="Chitietxuat" />
+  </EntityType>
+  <EntityType Name="TaiKhoan">
+    <Key>
+      <PropertyRef Name="acc" />
+    </Key>
+    <Property Name="acc" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="pass" Type="String" MaxLength="15" FixedLength="true" Unicode="false" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Chitietnha__maHH__0CBAE877">
+    <End Role="HangHoa" Type="Self.HangHoa" Multiplicity="0..1" />
+    <End Role="Chitietnhap" Type="Self.Chitietnhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HangHoa">
+        <PropertyRef Name="maHH" />
+      </Principal>
+      <Dependent Role="Chitietnhap">
+        <PropertyRef Name="maHH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Chitietnha__maHH__33D4B598">
+    <End Role="HangHoa" Type="Self.HangHoa" Multiplicity="0..1" />
+    <End Role="Chitietnhap" Type="Self.Chitietnhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HangHoa">
+        <PropertyRef Name="maHH" />
+      </Principal>
+      <Dependent Role="Chitietnhap">
+        <PropertyRef Name="maHH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Chitietnha__maPN__0DAF0CB0">
+    <End Role="PhieuNhap" Type="Self.PhieuNhap" Multiplicity="0..1" />
+    <End Role="Chitietnhap" Type="Self.Chitietnhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhieuNhap">
+        <PropertyRef Name="maPN" />
+      </Principal>
+      <Dependent Role="Chitietnhap">
+        <PropertyRef Name="maPN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Chitietnha__maPN__34C8D9D1">
+    <End Role="PhieuNhap" Type="Self.PhieuNhap" Multiplicity="0..1" />
+    <End Role="Chitietnhap" Type="Self.Chitietnhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhieuNhap">
+        <PropertyRef Name="maPN" />
+      </Principal>
+      <Dependent Role="Chitietnhap">
+        <PropertyRef Name="maPN" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Chitietxua__maHH__0EA330E9">
+    <End Role="HangHoa" Type="Self.HangHoa" Multiplicity="0..1" />
+    <End Role="Chitietxuat" Type="Self.Chitietxuat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HangHoa">
+        <PropertyRef Name="maHH" />
+      </Principal>
+      <Dependent Role="Chitietxuat">
+        <PropertyRef Name="maHH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Chitietxua__maHH__35BCFE0A">
+    <End Role="HangHoa" Type="Self.HangHoa" Multiplicity="0..1" />
+    <End Role="Chitietxuat" Type="Self.Chitietxuat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HangHoa">
+        <PropertyRef Name="maHH" />
+      </Principal>
+      <Dependent Role="Chitietxuat">
+        <PropertyRef Name="maHH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Chitietxua__maPX__0F975522">
+    <End Role="PhieuXuat" Type="Self.PhieuXuat" Multiplicity="0..1" />
+    <End Role="Chitietxuat" Type="Self.Chitietxuat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhieuXuat">
+        <PropertyRef Name="maPX" />
+      </Principal>
+      <Dependent Role="Chitietxuat">
+        <PropertyRef Name="maPX" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Chitietxua__maPX__36B12243">
+    <End Role="PhieuXuat" Type="Self.PhieuXuat" Multiplicity="0..1" />
+    <End Role="Chitietxuat" Type="Self.Chitietxuat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhieuXuat">
+        <PropertyRef Name="maPX" />
+      </Principal>
+      <Dependent Role="Chitietxuat">
+        <PropertyRef Name="maPX" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HangHoa__maNCC__108B795B">
+    <End Role="NCC" Type="Self.NCC" Multiplicity="0..1" />
+    <End Role="HangHoa" Type="Self.HangHoa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NCC">
+        <PropertyRef Name="maNCC" />
+      </Principal>
+      <Dependent Role="HangHoa">
+        <PropertyRef Name="maNCC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HangHoa__maNCC__37A5467C">
+    <End Role="NCC" Type="Self.NCC" Multiplicity="0..1" />
+    <End Role="HangHoa" Type="Self.HangHoa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NCC">
+        <PropertyRef Name="maNCC" />
+      </Principal>
+      <Dependent Role="HangHoa">
+        <PropertyRef Name="maNCC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ChartEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Chitietnhaps" EntityType="Self.Chitietnhap" />
+    <EntitySet Name="Chitietxuats" EntityType="Self.Chitietxuat" />
+    <EntitySet Name="HangHoas" EntityType="Self.HangHoa" />
+    <EntitySet Name="NCCs" EntityType="Self.NCC" />
+    <EntitySet Name="PhieuNhaps" EntityType="Self.PhieuNhap" />
+    <EntitySet Name="PhieuXuats" EntityType="Self.PhieuXuat" />
+    <EntitySet Name="TaiKhoans" EntityType="Self.TaiKhoan" />
+    <AssociationSet Name="FK__Chitietnha__maHH__0CBAE877" Association="Self.FK__Chitietnha__maHH__0CBAE877">
+      <End Role="HangHoa" EntitySet="HangHoas" />
+      <End Role="Chitietnhap" EntitySet="Chitietnhaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Chitietnha__maHH__33D4B598" Association="Self.FK__Chitietnha__maHH__33D4B598">
+      <End Role="HangHoa" EntitySet="HangHoas" />
+      <End Role="Chitietnhap" EntitySet="Chitietnhaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Chitietnha__maPN__0DAF0CB0" Association="Self.FK__Chitietnha__maPN__0DAF0CB0">
+      <End Role="PhieuNhap" EntitySet="PhieuNhaps" />
+      <End Role="Chitietnhap" EntitySet="Chitietnhaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Chitietnha__maPN__34C8D9D1" Association="Self.FK__Chitietnha__maPN__34C8D9D1">
+      <End Role="PhieuNhap" EntitySet="PhieuNhaps" />
+      <End Role="Chitietnhap" EntitySet="Chitietnhaps" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Chitietxua__maHH__0EA330E9" Association="Self.FK__Chitietxua__maHH__0EA330E9">
+      <End Role="HangHoa" EntitySet="HangHoas" />
+      <End Role="Chitietxuat" EntitySet="Chitietxuats" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Chitietxua__maHH__35BCFE0A" Association="Self.FK__Chitietxua__maHH__35BCFE0A">
+      <End Role="HangHoa" EntitySet="HangHoas" />
+      <End Role="Chitietxuat" EntitySet="Chitietxuats" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Chitietxua__maPX__0F975522" Association="Self.FK__Chitietxua__maPX__0F975522">
+      <End Role="PhieuXuat" EntitySet="PhieuXuats" />
+      <End Role="Chitietxuat" EntitySet="Chitietxuats" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Chitietxua__maPX__36B12243" Association="Self.FK__Chitietxua__maPX__36B12243">
+      <End Role="PhieuXuat" EntitySet="PhieuXuats" />
+      <End Role="Chitietxuat" EntitySet="Chitietxuats" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HangHoa__maNCC__108B795B" Association="Self.FK__HangHoa__maNCC__108B795B">
+      <End Role="NCC" EntitySet="NCCs" />
+      <End Role="HangHoa" EntitySet="HangHoas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HangHoa__maNCC__37A5467C" Association="Self.FK__HangHoa__maNCC__37A5467C">
+      <End Role="NCC" EntitySet="NCCs" />
+      <End Role="HangHoa" EntitySet="HangHoas" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
