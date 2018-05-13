@@ -70,7 +70,7 @@
             // 
             // btnThoat
             // 
-            this.btnThoat.Location = new System.Drawing.Point(468, 296);
+            this.btnThoat.Location = new System.Drawing.Point(319, 288);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(5);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(80, 34);
@@ -81,7 +81,7 @@
             // 
             // btnDangNhap
             // 
-            this.btnDangNhap.Location = new System.Drawing.Point(354, 296);
+            this.btnDangNhap.Location = new System.Drawing.Point(189, 287);
             this.btnDangNhap.Margin = new System.Windows.Forms.Padding(5);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(87, 35);
@@ -92,7 +92,7 @@
             // 
             // txtTenCSDL
             // 
-            this.txtTenCSDL.Location = new System.Drawing.Point(187, 243);
+            this.txtTenCSDL.Location = new System.Drawing.Point(187, 235);
             this.txtTenCSDL.Margin = new System.Windows.Forms.Padding(5);
             this.txtTenCSDL.Name = "txtTenCSDL";
             this.txtTenCSDL.Size = new System.Drawing.Size(361, 20);
@@ -104,7 +104,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Perpetua Titling MT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label4.Location = new System.Drawing.Point(25, 243);
+            this.label4.Location = new System.Drawing.Point(25, 235);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(149, 18);
@@ -113,7 +113,7 @@
             // 
             // txtMK
             // 
-            this.txtMK.Location = new System.Drawing.Point(347, 185);
+            this.txtMK.Location = new System.Drawing.Point(189, 178);
             this.txtMK.Margin = new System.Windows.Forms.Padding(5);
             this.txtMK.Name = "txtMK";
             this.txtMK.Size = new System.Drawing.Size(201, 20);
@@ -124,7 +124,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(257, 186);
+            this.label3.Location = new System.Drawing.Point(99, 179);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 17);
@@ -133,7 +133,7 @@
             // 
             // txtTenDangNhap
             // 
-            this.txtTenDangNhap.Location = new System.Drawing.Point(347, 140);
+            this.txtTenDangNhap.Location = new System.Drawing.Point(189, 133);
             this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(5);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
             this.txtTenDangNhap.Size = new System.Drawing.Size(201, 20);
@@ -143,7 +143,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(221, 141);
+            this.label2.Location = new System.Drawing.Point(63, 134);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 17);

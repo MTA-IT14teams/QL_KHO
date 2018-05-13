@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_TrangChu));
             this.SuspendLayout();
             // 
             // uc_TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::QL_KHO.Properties.Resources._12744264_226685724348284_5418897417529902687_n1;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.CausesValidation = false;
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Name = "uc_TrangChu";
-            this.Size = new System.Drawing.Size(747, 499);
+            this.Size = new System.Drawing.Size(1242, 996);
             this.ResumeLayout(false);
 
         }
