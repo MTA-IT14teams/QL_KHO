@@ -1,0 +1,178 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+div.container{
+	width: 100%;
+	margin: auto;
+	font-family: 'Freight Sans Bold', Helvetica, Arial, sans-serif !important;
+}
+header.myheader{
+	width: 100%;
+	height: 80px;
+	background:linear-gradient(#4CAF50,#306a32) !important;
+	position: fixed;
+}
+header.myheader h1{
+	color: #FFFFFF;
+	font-size: 34px;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 20px;
+}
+div.page{
+	width: 100%;
+	background: light blue;
+}
+div.content{
+	width: 1080px;
+	border: 1px solid gray;
+	margin: auto;
+	background-color: lavender;
+	padding-top: 80px;
+}
+div.content div.div1 p#login{
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+div.content div.div2 p#Main{
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+div.content div.div3 p#nhap{
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+div.content div.div4 p#xuat{
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+div.content div.div5 p#HH{
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+div.content div.div6 p#NCC{
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+div.content div.div7 p#seach{
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+div.content div.div8 p#statistical{
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+div.content div.div1 p#first-login{
+	font-size: 20px;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+div.content div.div2 p#first-Main{
+	font-size: 20px;
+	padding-top: 10px;
+	padding-left: 0px;
+}
+div.content div.div2 p#function{
+	font-size: 20px;
+	padding-top: 10px;
+	padding-left: 20px;
+}
+div.content div.div3 p#first-nhap{
+	font-size: 20px;
+	padding-top: 10px;
+	padding-left: 20px;
+}
+div.content div.div4 p#first-xuat{
+	font-size: 20px;
+	padding-top: 10px;
+	padding-left: 20px;
+}
+div.content div.div5 p#first-HH{
+	font-size: 20px;
+	padding-top: 10px;
+	padding-left: 20px;
+}
+div.content div.div6 p#first-NCC{
+	font-size: 20px;
+	padding-top: 10px;
+	padding-left: 20px;
+}
+div.content div.div7 p#first-seach{
+	font-size: 20px;
+	padding-top: 10px;
+	padding-left: 20px;
+}
+
+div.content div.div8 p#first-statistical{
+	font-size: 20px;
+	padding-top: 10px;
+	padding-left: 20px;
+}
+
+div.content div.div1 img{
+	margin-left: 300px;
+	margin-top: 30px;
+}
+div.content div.div2 img{
+	margin-left: 40px;
+	margin-top: 30px;
+	height: 500px;
+	width: 1000px
+}
+div.content div.div3 img{
+	margin-left: 40px;
+	margin-top: 30px;
+	height: 500px;
+	width: 1000px
+}
+div.content div.div4 img{
+	margin-left: 40px;
+	margin-top: 30px;
+	height: 500px;
+	width: 1000px
+}
+div.content div.div5 img{
+	margin-left: 40px;
+	margin-top: 30px;
+	height: 500px;
+	width: 1000px
+}
+div.content div.div6 img{
+	margin-left: 40px;
+	margin-top: 30px;
+	height: 500px;
+	width: 1000px
+}
+div.content div.div7 img{
+	margin-left: 40px;
+	margin-top: 30px;
+	height: 500px;
+	width: 1000px
+}
+div.content div.div8 img{
+	margin-left: 40px;
+	margin-top: 30px;
+	height: 500px;
+	width: 1000px
+}
+footer{
+	width: 980px;
+	margin: auto;
+	height: 50px;
+	color: black;
+	font-size: 30px;
+	text-align: center;
+	margin-top: 20px;
+}
