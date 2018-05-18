@@ -10,7 +10,7 @@ namespace QL_KHO.Model
         private string maPX;
         private DateTime ngayXuat;
         private int tongTien;
-        private string maCTX;
+       // private string maCTX;
         private string maHH;
         private int soLuong;
         private int donGia;
@@ -31,11 +31,7 @@ namespace QL_KHO.Model
             get { return tongTien; }
             set { tongTien = value; ; }
         }
-        public string MaCTX
-        {
-            get { return maCTX; }
-            set { maCTX = value; }
-        }
+       
         public string MaHH
         {
             get { return maHH; }

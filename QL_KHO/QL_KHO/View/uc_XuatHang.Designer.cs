@@ -39,15 +39,12 @@
             this.dtpNgayXuat = new System.Windows.Forms.DateTimePicker();
             this.txtDonGia = new System.Windows.Forms.TextBox();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
-            this.txtMaCTX = new System.Windows.Forms.TextBox();
             this.txtTongTien = new System.Windows.Forms.TextBox();
-            this.txtMaHH = new System.Windows.Forms.TextBox();
             this.txtMaPX = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,6 +57,7 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
+            this.cboMaHH = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvXuatHang)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -148,14 +146,6 @@
             this.txtSoLuong.Size = new System.Drawing.Size(150, 22);
             this.txtSoLuong.TabIndex = 1;
             // 
-            // txtMaCTX
-            // 
-            this.txtMaCTX.Location = new System.Drawing.Point(139, 124);
-            this.txtMaCTX.Name = "txtMaCTX";
-            this.txtMaCTX.Size = new System.Drawing.Size(150, 22);
-            this.txtMaCTX.TabIndex = 1;
-            this.txtMaCTX.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtMaCTX_MouseClick);
-            // 
             // txtTongTien
             // 
             this.txtTongTien.Location = new System.Drawing.Point(139, 334);
@@ -163,13 +153,6 @@
             this.txtTongTien.Size = new System.Drawing.Size(150, 22);
             this.txtTongTien.TabIndex = 1;
             this.txtTongTien.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtTongTien_MouseClick);
-            // 
-            // txtMaHH
-            // 
-            this.txtMaHH.Location = new System.Drawing.Point(139, 174);
-            this.txtMaHH.Name = "txtMaHH";
-            this.txtMaHH.Size = new System.Drawing.Size(150, 22);
-            this.txtMaHH.TabIndex = 1;
             // 
             // txtMaPX
             // 
@@ -203,17 +186,15 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.groupBox1.Controls.Add(this.cboMaHH);
             this.groupBox1.Controls.Add(this.dtpNgayXuat);
             this.groupBox1.Controls.Add(this.txtDonGia);
-            this.groupBox1.Controls.Add(this.txtMaHH);
             this.groupBox1.Controls.Add(this.txtSoLuong);
-            this.groupBox1.Controls.Add(this.txtMaCTX);
             this.groupBox1.Controls.Add(this.txtTongTien);
             this.groupBox1.Controls.Add(this.txtMaPX);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
@@ -234,16 +215,6 @@
             this.label3.Size = new System.Drawing.Size(103, 16);
             this.label3.TabIndex = 0;
             this.label3.Text = "Mã Hàng Hóa";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(19, 124);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 16);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Mã CTX";
             // 
             // label4
             // 
@@ -281,7 +252,6 @@
             this.cboTimKiem.FormattingEnabled = true;
             this.cboTimKiem.Items.AddRange(new object[] {
             "Mã Phiếu Xuất",
-            "Mã CTX",
             "Mã Hàng Hóa"});
             this.cboTimKiem.Location = new System.Drawing.Point(921, 13);
             this.cboTimKiem.Name = "cboTimKiem";
@@ -398,6 +368,14 @@
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
+            // cboMaHH
+            // 
+            this.cboMaHH.FormattingEnabled = true;
+            this.cboMaHH.Location = new System.Drawing.Point(139, 167);
+            this.cboMaHH.Name = "cboMaHH";
+            this.cboMaHH.Size = new System.Drawing.Size(150, 24);
+            this.cboMaHH.TabIndex = 3;
+            // 
             // uc_XuatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -430,10 +408,8 @@
         private System.Windows.Forms.DateTimePicker dtpNgayXuat;
         private System.Windows.Forms.TextBox txtDonGia;
         private System.Windows.Forms.TextBox txtSoLuong;
-        private System.Windows.Forms.TextBox txtMaCTX;
         private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.Button btnRef;
-        private System.Windows.Forms.TextBox txtMaHH;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnLuu;
@@ -443,7 +419,6 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -457,5 +432,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn maHH;
         private System.Windows.Forms.DataGridViewTextBoxColumn soLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn donGia;
+        private System.Windows.Forms.ComboBox cboMaHH;
     }
 }
