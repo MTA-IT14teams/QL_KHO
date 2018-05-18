@@ -80,3 +80,10 @@ E:\Nam_3_Kỳ2\Thuctapnhom\KHo_Chinh\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.View.
 E:\Nam_3_Kỳ2\Thuctapnhom\KHo_Chinh\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.View.uc_TrangChu.resources
 E:\Nam_3_Kỳ2\Thuctapnhom\KHo_Chinh\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.View.uc_XuatHang.resources
 E:\Nam_3_Kỳ2\Thuctapnhom\KHo_Chinh\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.csproj.GenerateResource.Cache
+D:\GitHub\QL_KHO\QL_KHO\QL_KHO\bin\Debug\QL_KHO.exe.config
+D:\GitHub\QL_KHO\QL_KHO\QL_KHO\bin\Debug\EntityFramework.dll
+D:\GitHub\QL_KHO\QL_KHO\QL_KHO\bin\Debug\EntityFramework.SqlServer.dll
+D:\GitHub\QL_KHO\QL_KHO\QL_KHO\bin\Debug\EntityFramework.xml
+D:\GitHub\QL_KHO\QL_KHO\QL_KHO\bin\Debug\EntityFramework.SqlServer.xml
+D:\GitHub\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.View.Thống_kê_nhập_xuất.resources
+D:\GitHub\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.View.uc_ThongKeNhapXuat.resources
