@@ -68,7 +68,7 @@
             this.btn_HangHoaXuat});
             this.menuStrip1.Location = new System.Drawing.Point(4, 94);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(276, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(368, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -91,6 +91,7 @@
             this.btn_HangHoaXuat.Name = "btn_HangHoaXuat";
             this.btn_HangHoaXuat.Size = new System.Drawing.Size(96, 20);
             this.btn_HangHoaXuat.Text = "Hàng hóa xuất";
+            this.btn_HangHoaXuat.Click += new System.EventHandler(this.btn_HangHoaXuat_Click);
             // 
             // dtg_HHN_HHX
             // 
