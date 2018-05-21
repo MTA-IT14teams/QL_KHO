@@ -227,9 +227,7 @@
             this.cbTimKiem.Items.AddRange(new object[] {
             "Mã NCC",
             "Tên NCC",
-            "Địa chỉ",
-            "SĐT",
-            "Email"});
+            "Địa chỉ"});
             this.cbTimKiem.Location = new System.Drawing.Point(226, 28);
             this.cbTimKiem.Name = "cbTimKiem";
             this.cbTimKiem.Size = new System.Drawing.Size(282, 32);

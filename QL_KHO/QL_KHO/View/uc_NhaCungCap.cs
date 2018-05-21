@@ -196,15 +196,7 @@ namespace QL_KHO.View
             {
                 dgvNhaCungCap.DataSource = NCC_ctl.TimKiemNCC("select * from NCC where diaChi Like N'%" + txtTimKiem.Text.Trim() + "%'");
             }
-            if (cbTimKiem.Text == "SĐT")
-            {
-                dgvNhaCungCap.DataSource = NCC_ctl.TimKiemNCC("select * from NCC where SDT like '%" + txtTimKiem.Text.Trim() + "%'");
-            }
-            if (cbTimKiem.Text == "Email")
-            {
-                dgvNhaCungCap.DataSource = NCC_ctl.TimKiemNCC("select * from NCC where email like '%" + txtTimKiem.Text.Trim() + "%'");
-            }
-
+           
         }
     }
 }

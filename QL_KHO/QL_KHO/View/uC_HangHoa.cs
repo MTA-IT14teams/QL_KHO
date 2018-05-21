@@ -196,13 +196,13 @@ namespace QL_KHO.View
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            if (cbTimKiem.Text == "Mã NCC")
+            if (cbTimKiem.Text == "Mã HH")
             {
                 dgvHangHoa.DataSource = HH_ctl.TimKiemHH("select * from HangHoa  where maHH like '%" + txtTimKiem.Text.Trim() + "%'");
             }
             if (cbTimKiem.Text == "Tên HH")
             {
-                dgvHangHoa.DataSource = HH_ctl.TimKiemHH("select * from NCC where tenHH like N'%" + txtTimKiem.Text.Trim() + "%'");
+                dgvHangHoa.DataSource = HH_ctl.TimKiemHH("select * from HangHoa where tenHH like N'%" + txtTimKiem.Text.Trim() + "%'");
             }
             if (cbTimKiem.Text == "Mã NCC")
             {
