@@ -110,3 +110,6 @@ E:\Nam_3_Kỳ2\Thuctapnhom\Kho_Tu_final\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.Vi
 E:\Nam_3_Kỳ2\Thuctapnhom\Kho_Tu_final\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.View.uc_TrangChu.resources
 E:\Nam_3_Kỳ2\Thuctapnhom\Kho_Tu_final\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.View.uc_XuatHang.resources
 E:\Nam_3_Kỳ2\Thuctapnhom\Kho_Tu_final\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.csproj.GenerateResource.Cache
+C:\Users\vuman\Desktop\Github\QL_KHO\QL_KHO\QL_KHO\bin\Debug\QL_KHO.exe.config
+C:\Users\vuman\Desktop\Github\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.exe
+C:\Users\vuman\Desktop\Github\QL_KHO\QL_KHO\QL_KHO\obj\Debug\QL_KHO.pdb
