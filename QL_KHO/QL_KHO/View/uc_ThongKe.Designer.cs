@@ -35,7 +35,6 @@
             this.btn_HangHoaNhap = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_HangHoaXuat = new System.Windows.Forms.ToolStripMenuItem();
             this.dtg_HHN_HHX = new System.Windows.Forms.DataGridView();
-            this.thốngKêĐồThịToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grBTitle.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_HHN_HHX)).BeginInit();
@@ -66,11 +65,10 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btn_HangHoa,
             this.btn_HangHoaNhap,
-            this.btn_HangHoaXuat,
-            this.thốngKêĐồThịToolStripMenuItem});
+            this.btn_HangHoaXuat});
             this.menuStrip1.Location = new System.Drawing.Point(4, 94);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(471, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(276, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -93,7 +91,6 @@
             this.btn_HangHoaXuat.Name = "btn_HangHoaXuat";
             this.btn_HangHoaXuat.Size = new System.Drawing.Size(96, 20);
             this.btn_HangHoaXuat.Text = "Hàng hóa xuất";
-            //this.btn_HangHoaXuat.Click += new System.EventHandler(this.btn_HangHoaXuat_Click);
             // 
             // dtg_HHN_HHX
             // 
@@ -104,14 +101,6 @@
             this.dtg_HHN_HHX.Name = "dtg_HHN_HHX";
             this.dtg_HHN_HHX.Size = new System.Drawing.Size(1163, 441);
             this.dtg_HHN_HHX.TabIndex = 1;
-            //this.dtg_HHN_HHX.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_HHN_HHX_CellContentClick);
-            // 
-            // thốngKêĐồThịToolStripMenuItem
-            // 
-            this.thốngKêĐồThịToolStripMenuItem.Name = "thốngKêĐồThịToolStripMenuItem";
-            this.thốngKêĐồThịToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
-            this.thốngKêĐồThịToolStripMenuItem.Text = "Thống kê đồ thị";
-            //this.thốngKêĐồThịToolStripMenuItem.Click += new System.EventHandler(this.thốngKêĐồThịToolStripMenuItem_Click);
             // 
             // uc_ThongKe
             // 
@@ -141,6 +130,5 @@
         private System.Windows.Forms.ToolStripMenuItem btn_HangHoaNhap;
         private System.Windows.Forms.ToolStripMenuItem btn_HangHoaXuat;
         private System.Windows.Forms.DataGridView dtg_HHN_HHX;
-        private System.Windows.Forms.ToolStripMenuItem thốngKêĐồThịToolStripMenuItem;
     }
 }

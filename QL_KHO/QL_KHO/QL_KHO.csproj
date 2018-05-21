@@ -87,11 +87,11 @@
     <Compile Include="View\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmThongKeNhapXuat.cs">
-      <SubType>Form</SubType>
+    <Compile Include="View\uc_ThongKeNhapXuat.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\frmThongKeNhapXuat.Designer.cs">
-      <DependentUpon>frmThongKeNhapXuat.cs</DependentUpon>
+    <Compile Include="View\uc_ThongKeNhapXuat.Designer.cs">
+      <DependentUpon>uc_ThongKeNhapXuat.cs</DependentUpon>
     </Compile>
     <Compile Include="View\uC_HangHoa.cs">
       <SubType>UserControl</SubType>
@@ -116,12 +116,6 @@
     </Compile>
     <Compile Include="View\uc_ThongKe.Designer.cs">
       <DependentUpon>uc_ThongKe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\uc_ThongKeNhapXuat.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\uc_ThongKeNhapXuat.Designer.cs">
-      <DependentUpon>uc_ThongKeNhapXuat.cs</DependentUpon>
     </Compile>
     <Compile Include="View\uc_TimKiem.cs">
       <SubType>UserControl</SubType>
@@ -160,8 +154,8 @@
     <EmbeddedResource Include="View\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmThongKeNhapXuat.resx">
-      <DependentUpon>frmThongKeNhapXuat.cs</DependentUpon>
+    <EmbeddedResource Include="View\uc_ThongKeNhapXuat.resx">
+      <DependentUpon>uc_ThongKeNhapXuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\uC_HangHoa.resx">
       <DependentUpon>uC_HangHoa.cs</DependentUpon>
@@ -174,9 +168,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\uc_ThongKe.resx">
       <DependentUpon>uc_ThongKe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\uc_ThongKeNhapXuat.resx">
-      <DependentUpon>uc_ThongKeNhapXuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\uc_TimKiem.resx">
       <DependentUpon>uc_TimKiem.cs</DependentUpon>

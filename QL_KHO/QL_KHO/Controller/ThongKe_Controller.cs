@@ -68,5 +68,33 @@ namespace QL_KHO.Controller
             }
             return false;
         }
+        public string GetData_proc_tinhtien(string proc, string ngaybatdau, string ngayketthuc)
+        {
+            SqlConnection conn = new SqlConnection(Controller.ConnectDatabase.ConnectionString);
+            DataTable dt = new DataTable();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(proc, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ngaybatdau", ngaybatdau);
+                cmd.Parameters.AddWithValue("@ngayketthuc", ngayketthuc);
+                cmd.ExecuteNonQuery();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                conn.Close();
+                if (dt.Rows.Count > 0)
+                    return dt.Rows[0][0].ToString();
+                else
+                    return "0";
+
+            }
+            catch (SqlException)
+            {
+                conn.Close();
+                return "0";
+            }
+        }
+
     }
 }

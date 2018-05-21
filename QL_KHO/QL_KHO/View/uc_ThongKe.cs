@@ -31,5 +31,8 @@ namespace QL_KHO.View
             dtg_HHN_HHX.DataSource = dt;
         }
 
+
+
+
     }
 }
