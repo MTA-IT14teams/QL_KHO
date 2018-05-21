@@ -8,7 +8,7 @@ where HangHoa.maHH=A.maHH
 
 go
 
-create proc tk_xuat
+alter proc tk_xuat
 as
  begin
  select HH.maHH as N'Mã HH', tenHH as N'Tên HH', tenNCC as N'Tên NCC',sum(CTX.soluong) as 'SL Xuất', donGia as N'Đơn giá', sum(CTX.donGia*CTX.soLuong) as N'Tiền Xuất'
@@ -19,7 +19,7 @@ as
 
 
  go
- create proc tk_nhap
+alter proc tk_nhap
  as
  begin
  select HH.maHH as N'Mã HH', tenHH as N'Tên HH', tenNCC as N'Tên NCC',sum(CTN.soluong) as 'SL Nhập', donGia as N'Đơn giá', sum(CTN.donGia*CTN.soLuong) as N'Tiền Nhập'
@@ -30,7 +30,7 @@ as
 
 
  go
- create proc tk_hh
+alter proc tk_hh
  as
  begin
  select  maHH as N'Mã Hàng hóa', tenHH as N'Tên Hàng hóa', tenNCC as N'Nhà cung cấp' , soluong as 'Số lượng'

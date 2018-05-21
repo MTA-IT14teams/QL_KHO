@@ -1,19 +1,19 @@
 ﻿-- thủ tục xem nhà cung cấp
-create proc dbo.Xem_NCC
+alter proc dbo.Xem_NCC
 as
 begin
 select * from NCC
 end
 go
 -- thủ tục xem hàng hóa
-create proc dbo.Xem_HH
+alter proc dbo.Xem_HH
 as
 begin
 select * from HangHoa
 end
 go
 -- thủ tục thêm hàng hóa
-create proc dbo.them_HH
+alter proc dbo.them_HH
 (
 @MaHH char(10),
 @TenHH nvarchar(50),
@@ -39,7 +39,7 @@ select maHH, tenHH, NCC.maNCC, soluong from HangHoa, NCC
 where HangHoa.maNCC = NCC.maNCC
 
  -- thủ tục xóa nhà cung cấp
-create proc dbo.Xoa_NhaCungCap (@maNCC char(10))
+alter proc dbo.Xoa_NhaCungCap (@maNCC char(10))
 as
 begin
 delete HangHoa
@@ -50,7 +50,7 @@ end
 go
 
 -- thủ tục xóa hàng hóa
-create proc dbo.Xoa_HangHoa(@maHH char(10))
+alter proc dbo.Xoa_HangHoa(@maHH char(10))
 as
 begin
 delete Chitietnhap
