@@ -70,7 +70,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(111, 34);
+            this.label2.Location = new System.Drawing.Point(62, 37);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(121, 24);
             this.label2.TabIndex = 0;
@@ -80,7 +80,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(111, 74);
+            this.label3.Location = new System.Drawing.Point(62, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 24);
             this.label3.TabIndex = 0;
@@ -90,7 +90,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(111, 124);
+            this.label4.Location = new System.Drawing.Point(62, 127);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(157, 24);
             this.label4.TabIndex = 0;
@@ -99,7 +99,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(111, 167);
+            this.label5.Location = new System.Drawing.Point(62, 170);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 24);
             this.label5.TabIndex = 0;
@@ -107,21 +107,21 @@
             // 
             // txtMaHH
             // 
-            this.txtMaHH.Location = new System.Drawing.Point(310, 31);
+            this.txtMaHH.Location = new System.Drawing.Point(261, 34);
             this.txtMaHH.Name = "txtMaHH";
             this.txtMaHH.Size = new System.Drawing.Size(254, 29);
             this.txtMaHH.TabIndex = 1;
             // 
             // txtTenHH
             // 
-            this.txtTenHH.Location = new System.Drawing.Point(310, 71);
+            this.txtTenHH.Location = new System.Drawing.Point(261, 74);
             this.txtTenHH.Name = "txtTenHH";
             this.txtTenHH.Size = new System.Drawing.Size(254, 29);
             this.txtTenHH.TabIndex = 1;
             // 
             // txtSoLuong
             // 
-            this.txtSoLuong.Location = new System.Drawing.Point(310, 164);
+            this.txtSoLuong.Location = new System.Drawing.Point(261, 167);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(254, 29);
             this.txtSoLuong.TabIndex = 1;
@@ -129,7 +129,7 @@
             // cbMaNCC
             // 
             this.cbMaNCC.FormattingEnabled = true;
-            this.cbMaNCC.Location = new System.Drawing.Point(310, 121);
+            this.cbMaNCC.Location = new System.Drawing.Point(261, 124);
             this.cbMaNCC.Name = "cbMaNCC";
             this.cbMaNCC.Size = new System.Drawing.Size(254, 32);
             this.cbMaNCC.TabIndex = 2;
@@ -148,7 +148,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 83);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(691, 225);
+            this.groupBox1.Size = new System.Drawing.Size(638, 225);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin hàng hóa";
@@ -159,15 +159,16 @@
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.dgvHangHoa);
-            this.groupBox2.Location = new System.Drawing.Point(0, 314);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(644, 83);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1338, 237);
+            this.groupBox2.Size = new System.Drawing.Size(691, 477);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
             // dgvHangHoa
             // 
-            this.dgvHangHoa.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvHangHoa.BackgroundColor = System.Drawing.Color.White;
             this.dgvHangHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHangHoa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
@@ -176,10 +177,10 @@
             this.maNCC,
             this.soluong});
             this.dgvHangHoa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvHangHoa.Location = new System.Drawing.Point(3, 16);
+            this.dgvHangHoa.Location = new System.Drawing.Point(3, 18);
             this.dgvHangHoa.Name = "dgvHangHoa";
             this.dgvHangHoa.RowHeadersVisible = false;
-            this.dgvHangHoa.Size = new System.Drawing.Size(1332, 218);
+            this.dgvHangHoa.Size = new System.Drawing.Size(685, 456);
             this.dgvHangHoa.TabIndex = 0;
             this.dgvHangHoa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHangHoa_CellClick);
             this.dgvHangHoa.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvHangHoa_RowPrePaint);
@@ -254,9 +255,9 @@
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.btnthem);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(697, 83);
+            this.groupBox3.Location = new System.Drawing.Point(0, 314);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(650, 225);
+            this.groupBox3.Size = new System.Drawing.Size(619, 243);
             this.groupBox3.TabIndex = 97;
             this.groupBox3.TabStop = false;
             // 
@@ -266,7 +267,7 @@
             this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
             this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnTimKiem.Location = new System.Drawing.Point(556, 34);
+            this.btnTimKiem.Location = new System.Drawing.Point(507, 28);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(70, 67);
             this.btnTimKiem.TabIndex = 86;
@@ -281,7 +282,7 @@
             this.btnluu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnluu.Image = ((System.Drawing.Image)(resources.GetObject("btnluu.Image")));
             this.btnluu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnluu.Location = new System.Drawing.Point(438, 141);
+            this.btnluu.Location = new System.Drawing.Point(389, 135);
             this.btnluu.Name = "btnluu";
             this.btnluu.Size = new System.Drawing.Size(70, 54);
             this.btnluu.TabIndex = 91;
@@ -292,7 +293,7 @@
             // 
             // txtTimKiem
             // 
-            this.txtTimKiem.Location = new System.Drawing.Point(233, 72);
+            this.txtTimKiem.Location = new System.Drawing.Point(184, 66);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(282, 29);
             this.txtTimKiem.TabIndex = 82;
@@ -303,7 +304,7 @@
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnThoat.Location = new System.Drawing.Point(556, 141);
+            this.btnThoat.Location = new System.Drawing.Point(507, 135);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(70, 54);
             this.btnThoat.TabIndex = 92;
@@ -320,7 +321,7 @@
             "Tên HH",
             "Mã NCC",
             "Số lượng"});
-            this.cbTimKiem.Location = new System.Drawing.Point(233, 28);
+            this.cbTimKiem.Location = new System.Drawing.Point(184, 22);
             this.cbTimKiem.Name = "cbTimKiem";
             this.cbTimKiem.Size = new System.Drawing.Size(282, 32);
             this.cbTimKiem.TabIndex = 83;
@@ -331,7 +332,7 @@
             this.btnxoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnxoa.Image = ((System.Drawing.Image)(resources.GetObject("btnxoa.Image")));
             this.btnxoa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnxoa.Location = new System.Drawing.Point(335, 141);
+            this.btnxoa.Location = new System.Drawing.Point(286, 135);
             this.btnxoa.Name = "btnxoa";
             this.btnxoa.Size = new System.Drawing.Size(70, 54);
             this.btnxoa.TabIndex = 93;
@@ -344,7 +345,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(75, 75);
+            this.label7.Location = new System.Drawing.Point(26, 69);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 24);
             this.label7.TabIndex = 81;
@@ -356,7 +357,7 @@
             this.btnsua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsua.Image = ((System.Drawing.Image)(resources.GetObject("btnsua.Image")));
             this.btnsua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnsua.Location = new System.Drawing.Point(233, 141);
+            this.btnsua.Location = new System.Drawing.Point(184, 135);
             this.btnsua.Name = "btnsua";
             this.btnsua.Size = new System.Drawing.Size(70, 54);
             this.btnsua.TabIndex = 94;
@@ -369,7 +370,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(75, 31);
+            this.label6.Location = new System.Drawing.Point(26, 25);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(129, 24);
             this.label6.TabIndex = 80;
@@ -381,7 +382,7 @@
             this.btnthem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnthem.Image = ((System.Drawing.Image)(resources.GetObject("btnthem.Image")));
             this.btnthem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnthem.Location = new System.Drawing.Point(134, 141);
+            this.btnthem.Location = new System.Drawing.Point(85, 135);
             this.btnthem.Name = "btnthem";
             this.btnthem.Size = new System.Drawing.Size(70, 54);
             this.btnthem.TabIndex = 95;
@@ -399,7 +400,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "uC_HangHoa";
-            this.Size = new System.Drawing.Size(1338, 551);
+            this.Size = new System.Drawing.Size(1338, 560);
             this.Load += new System.EventHandler(this.uC_HangHoa_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
