@@ -67,6 +67,7 @@ namespace QL_KHO.View
             cbMaNCC.DisplayMember = "tenNCC";
             cbMaNCC.ValueMember = "maNCC";
         }
+        // Hàm Load
         private void uC_HangHoa_Load(object sender, EventArgs e)
         {
             HienThi();
@@ -74,6 +75,7 @@ namespace QL_KHO.View
             DisEnl(false);
         }
 
+        // Xử lý trong dgv
         private void dgvHangHoa_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtMaHH.Text = Convert.ToString(dgvHangHoa.CurrentRow.Cells["maHH"].Value);
@@ -82,6 +84,7 @@ namespace QL_KHO.View
             cbMaNCC.Text = Convert.ToString(dgvHangHoa.CurrentRow.Cells["maNCC"].Value);
         }
 
+        // Thêm
         private void btnthem_Click(object sender, EventArgs e)
         {
             hanhdong = 0;
@@ -91,6 +94,7 @@ namespace QL_KHO.View
             //txtMaNCC.Enabled = false;
         }
 
+        // Sửa 
         private void btnsua_Click(object sender, EventArgs e)
         {
             hanhdong = 1;
@@ -98,6 +102,7 @@ namespace QL_KHO.View
             txtMaHH.Enabled = false;
         }
 
+        // Xóa
         private void btnxoa_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -117,6 +122,7 @@ namespace QL_KHO.View
             }
         }
 
+        // Lưu
         private void btnluu_Click(object sender, EventArgs e)
         {
             if (txtMaHH.Text == "")
@@ -182,6 +188,7 @@ namespace QL_KHO.View
 
         }
 
+        // Thoát
         private void btnThoat_Click(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("Bạn chắc chắn muốn hủy thao tác đang làm?", "Xác nhận hủy", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -194,6 +201,7 @@ namespace QL_KHO.View
                
         }
 
+        // Tìm kiếm
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             if (cbTimKiem.Text == "Mã HH")
