@@ -30,7 +30,6 @@ namespace QL_KHO.View
             txtMaPX.Enabled = e;
             dtpNgayXuat.Enabled = e;
             txtTongTien.Enabled = e;
-           // txtMaCTX.Enabled = e;
             cboMaHH.Enabled = e;
             txtSoLuong.Enabled = e;
             txtDonGia.Enabled = e;
@@ -233,9 +232,7 @@ namespace QL_KHO.View
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@MaPX", txtMaPX.Text.Trim());
                     cmd.Parameters.AddWithValue("@NgayXuat", dtpNgayXuat.Value);
-
                     cmd.Parameters.AddWithValue("@Tongtien", txtTongTien.Text.Trim());
-                    // cmd.Parameters.AddWithValue("@MaCTX", txtMaCTX.Text.Trim());
                     cmd.Parameters.AddWithValue("@MaHH", cboMaHH.SelectedValue);
                     cmd.Parameters.AddWithValue("@SLuong", txtSoLuong.Text.Trim());
                     cmd.Parameters.AddWithValue("@DonGia", txtDonGia.Text.Trim());
@@ -269,10 +266,6 @@ namespace QL_KHO.View
             {
                 dgvXuatHang.DataSource = XH_ctl.TimKiemHH("select px.maPX, ngayXuat, tongTien,  maHH, soLuong, donGia from PhieuXuat px, Chitietxuat ct where px.maPX=ct.maPX and px.maPX Like '%" + txtTimKiem.Text.Trim() + "%'");
             }
-            //if (cboTimKiem.Text == "Mã CTX")
-            //{
-            //    dgvXuatHang.DataSource = XH_ctl.TimKiemHH("select px.maPX, ngayXuat, tongTien,  maHH, soLuong, donGia from PhieuXuat px, Chitietxuat ct where px.maPX=ct.maPX and maCTX Like '%" + txtTimKiem.Text.Trim() + "%'");
-            //}
             if (cboTimKiem.Text == "Mã Hàng Hóa")
             {
                 dgvXuatHang.DataSource = XH_ctl.TimKiemHH("select px.maPX, ngayXuat, tongTien,  maHH, soLuong, donGia from PhieuXuat px, Chitietxuat ct where px.maPX=ct.maPX and maHH Like '%" + txtTimKiem.Text.Trim() + "%'");

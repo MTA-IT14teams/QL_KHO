@@ -30,7 +30,6 @@ namespace QL_KHO.View
             txtMaPN.Enabled = e;
             dtpNgayNhap.Enabled = e;
             txtTongTien.Enabled = e;
-            //txtMaCTN.Enabled = e;
              cboMaHH.Enabled = e;
             txtSoLuong.Enabled = e;
             txtDonGia.Enabled = e;
@@ -144,8 +143,6 @@ namespace QL_KHO.View
             txtMaPN.Text = dgvNhapHang.CurrentRow.Cells["maPN"].Value.ToString();
             dtpNgayNhap.Text = dgvNhapHang.CurrentRow.Cells["ngayNhap"].Value.ToString();
             txtTongTien.Text = dgvNhapHang.CurrentRow.Cells["tongTien"].Value.ToString();
-            //txtMaCTN.Text = dgvNhapHang.CurrentRow.Cells["maCTN"].Value.ToString();
-            //  cboDichVu.Text = dgvHoaDon.CurrentRow.Cells["MaDV"].Value.ToString();
 
             cboMaHH.Text = dgvNhapHang.CurrentRow.Cells["maHH"].Value.ToString();
             txtSoLuong.Text = dgvNhapHang.CurrentRow.Cells["soLuong"].Value.ToString();
@@ -159,7 +156,6 @@ namespace QL_KHO.View
             SetNull();
             DisEnl(true);
            txtMaPN.Text = TangMa();
-           // txtMaPN.Enabled = false;
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -199,12 +195,8 @@ namespace QL_KHO.View
                     SqlCommand cmd = new SqlCommand("ThemNH", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@MaPN", txtMaPN.Text.Trim());
-                    ////cmd.Parameters.AddWithValue("@Madv", txtMaDV.Text.Trim());//
-                    // cmd.Parameters.AddWithValue("@Madv", cboDichVu.SelectedValue);
                     cmd.Parameters.AddWithValue("@NgayNhap", dtpNgayNhap.Value);
-
                     cmd.Parameters.AddWithValue("@Tongtien", txtTongTien.Text.Trim());
-                    // cmd.Parameters.AddWithValue("@MaCTN", txtMaCTN.Text.Trim());
                     cmd.Parameters.AddWithValue("@MaHH", cboMaHH.SelectedValue);
                     cmd.Parameters.AddWithValue("@SLuong", txtSoLuong.Text.Trim());
                     cmd.Parameters.AddWithValue("@DonGia", txtDonGia.Text.Trim());
@@ -229,12 +221,8 @@ namespace QL_KHO.View
                     SqlCommand cmd = new SqlCommand("SuaNH", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@MaPN", txtMaPN.Text.Trim());
-                    ////cmd.Parameters.AddWithValue("@Madv", txtMaDV.Text.Trim());//
-                    // cmd.Parameters.AddWithValue("@Madv", cboDichVu.SelectedValue);
                     cmd.Parameters.AddWithValue("@NgayNhap", dtpNgayNhap.Value);
-
                     cmd.Parameters.AddWithValue("@Tongtien", txtTongTien.Text.Trim());
-                    //cmd.Parameters.AddWithValue("@MaCTN", txtMaCTN.Text.Trim());
                     cmd.Parameters.AddWithValue("@MaHH", cboMaHH.SelectedValue);
                     cmd.Parameters.AddWithValue("@SLuong", txtSoLuong.Text.Trim());
                     cmd.Parameters.AddWithValue("@DonGia", txtDonGia.Text.Trim());
@@ -281,10 +269,5 @@ namespace QL_KHO.View
             Tongtien();
         }
 
-      
-        //private void txtTongTien_MouseClick(object sender, MouseEventArgs e)
-        //{
-        //    Tongtien();
-        //}
     }
 }

@@ -30,11 +30,9 @@ namespace QL_KHO.Controller
         {
 
             SqlCommand cmd = new SqlCommand(NameProc, conn);
-            // cmd.CommandText = NameProc;
             cmd.CommandType = CommandType.StoredProcedure;
             if (para != null)
                 cmd.Parameters.AddRange(para);
-            //cmd.Connection = conn;
             SqlDataAdapter da = new SqlDataAdapter();
             da.SelectCommand = cmd;
             DataTable dt = new DataTable();
@@ -77,7 +75,6 @@ namespace QL_KHO.Controller
                 new SqlParameter("maPX",XH.MaPX),
                 new SqlParameter("ngayXuat",XH.NgayXuat),
                 new SqlParameter("tongTien",XH.TongTien),
-                //new SqlParameter ("maCTX",XH.MaCTX),
                 new SqlParameter ("maHH",XH.MaHH),
                 new SqlParameter ("soLuong",XH.SoLuong),
                 new SqlParameter ("donGia",XH.DonGia),
