@@ -37,6 +37,7 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.cboTimKiem = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboMaHH = new System.Windows.Forms.ComboBox();
             this.txtMaPN = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -53,11 +54,9 @@
             this.dgvNhapHang = new System.Windows.Forms.DataGridView();
             this.maPN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngayNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maCTN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.donGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cboMaHH = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhapHang)).BeginInit();
             this.SuspendLayout();
@@ -154,6 +153,14 @@
             this.groupBox1.TabIndex = 116;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập Hàng";
+            // 
+            // cboMaHH
+            // 
+            this.cboMaHH.FormattingEnabled = true;
+            this.cboMaHH.Location = new System.Drawing.Point(139, 171);
+            this.cboMaHH.Name = "cboMaHH";
+            this.cboMaHH.Size = new System.Drawing.Size(150, 24);
+            this.cboMaHH.TabIndex = 3;
             // 
             // txtMaPN
             // 
@@ -316,7 +323,6 @@
             this.dgvNhapHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maPN,
             this.ngayNhap,
-            this.maCTN,
             this.maHH,
             this.soLuong,
             this.donGia});
@@ -340,13 +346,6 @@
             this.ngayNhap.HeaderText = "Ngày Nhập";
             this.ngayNhap.Name = "ngayNhap";
             // 
-            // maCTN
-            // 
-            this.maCTN.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.maCTN.DataPropertyName = "maCTN";
-            this.maCTN.HeaderText = "Mã CTN";
-            this.maCTN.Name = "maCTN";
-            // 
             // maHH
             // 
             this.maHH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -367,14 +366,6 @@
             this.donGia.DataPropertyName = "donGia";
             this.donGia.HeaderText = "Đơn Giá";
             this.donGia.Name = "donGia";
-            // 
-            // cboMaHH
-            // 
-            this.cboMaHH.FormattingEnabled = true;
-            this.cboMaHH.Location = new System.Drawing.Point(139, 171);
-            this.cboMaHH.Name = "cboMaHH";
-            this.cboMaHH.Size = new System.Drawing.Size(150, 24);
-            this.cboMaHH.TabIndex = 3;
             // 
             // uc_NhapHang
             // 
@@ -426,12 +417,11 @@
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.DataGridView dgvNhapHang;
+        private System.Windows.Forms.ComboBox cboMaHH;
         private System.Windows.Forms.DataGridViewTextBoxColumn maPN;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngayNhap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maCTN;
         private System.Windows.Forms.DataGridViewTextBoxColumn maHH;
         private System.Windows.Forms.DataGridViewTextBoxColumn soLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn donGia;
-        private System.Windows.Forms.ComboBox cboMaHH;
     }
 }

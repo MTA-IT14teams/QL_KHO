@@ -30,12 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_XuatHang));
             this.dgvXuatHang = new System.Windows.Forms.DataGridView();
-            this.maPX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngayXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maCTX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.donGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtpNgayXuat = new System.Windows.Forms.DateTimePicker();
             this.txtDonGia = new System.Windows.Forms.TextBox();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
@@ -44,6 +38,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cboMaHH = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,7 +52,11 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.cboMaHH = new System.Windows.Forms.ComboBox();
+            this.maPX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.donGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvXuatHang)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -71,7 +70,6 @@
             this.dgvXuatHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maPX,
             this.ngayXuat,
-            this.maCTX,
             this.maHH,
             this.soLuong,
             this.donGia});
@@ -80,48 +78,6 @@
             this.dgvXuatHang.Size = new System.Drawing.Size(778, 441);
             this.dgvXuatHang.TabIndex = 115;
             this.dgvXuatHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvXuatHang_CellClick);
-            // 
-            // maPX
-            // 
-            this.maPX.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.maPX.DataPropertyName = "maPX";
-            this.maPX.HeaderText = "Mã Phiếu Xuất";
-            this.maPX.Name = "maPX";
-            // 
-            // ngayXuat
-            // 
-            this.ngayXuat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ngayXuat.DataPropertyName = "ngayXuat";
-            this.ngayXuat.HeaderText = "Ngày Xuất";
-            this.ngayXuat.Name = "ngayXuat";
-            // 
-            // maCTX
-            // 
-            this.maCTX.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.maCTX.DataPropertyName = "maCTX";
-            this.maCTX.HeaderText = "Mã CTX";
-            this.maCTX.Name = "maCTX";
-            // 
-            // maHH
-            // 
-            this.maHH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.maHH.DataPropertyName = "maHH";
-            this.maHH.HeaderText = "Mã Hàng Hóa";
-            this.maHH.Name = "maHH";
-            // 
-            // soLuong
-            // 
-            this.soLuong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.soLuong.DataPropertyName = "soLuong";
-            this.soLuong.HeaderText = "Số Lượng ";
-            this.soLuong.Name = "soLuong";
-            // 
-            // donGia
-            // 
-            this.donGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.donGia.DataPropertyName = "donGia";
-            this.donGia.HeaderText = "Đơn Giá";
-            this.donGia.Name = "donGia";
             // 
             // dtpNgayXuat
             // 
@@ -205,6 +161,14 @@
             this.groupBox1.TabIndex = 116;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Xuất Hàng";
+            // 
+            // cboMaHH
+            // 
+            this.cboMaHH.FormattingEnabled = true;
+            this.cboMaHH.Location = new System.Drawing.Point(139, 167);
+            this.cboMaHH.Name = "cboMaHH";
+            this.cboMaHH.Size = new System.Drawing.Size(150, 24);
+            this.cboMaHH.TabIndex = 3;
             // 
             // label3
             // 
@@ -368,13 +332,40 @@
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // cboMaHH
+            // maPX
             // 
-            this.cboMaHH.FormattingEnabled = true;
-            this.cboMaHH.Location = new System.Drawing.Point(139, 167);
-            this.cboMaHH.Name = "cboMaHH";
-            this.cboMaHH.Size = new System.Drawing.Size(150, 24);
-            this.cboMaHH.TabIndex = 3;
+            this.maPX.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.maPX.DataPropertyName = "maPX";
+            this.maPX.HeaderText = "Mã Phiếu Xuất";
+            this.maPX.Name = "maPX";
+            // 
+            // ngayXuat
+            // 
+            this.ngayXuat.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ngayXuat.DataPropertyName = "ngayXuat";
+            this.ngayXuat.HeaderText = "Ngày Xuất";
+            this.ngayXuat.Name = "ngayXuat";
+            // 
+            // maHH
+            // 
+            this.maHH.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.maHH.DataPropertyName = "maHH";
+            this.maHH.HeaderText = "Mã Hàng Hóa";
+            this.maHH.Name = "maHH";
+            // 
+            // soLuong
+            // 
+            this.soLuong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.soLuong.DataPropertyName = "soLuong";
+            this.soLuong.HeaderText = "Số Lượng ";
+            this.soLuong.Name = "soLuong";
+            // 
+            // donGia
+            // 
+            this.donGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.donGia.DataPropertyName = "donGia";
+            this.donGia.HeaderText = "Đơn Giá";
+            this.donGia.Name = "donGia";
             // 
             // uc_XuatHang
             // 
@@ -426,12 +417,11 @@
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnTimKiem;
+        private System.Windows.Forms.ComboBox cboMaHH;
         private System.Windows.Forms.DataGridViewTextBoxColumn maPX;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngayXuat;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maCTX;
         private System.Windows.Forms.DataGridViewTextBoxColumn maHH;
         private System.Windows.Forms.DataGridViewTextBoxColumn soLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn donGia;
-        private System.Windows.Forms.ComboBox cboMaHH;
     }
 }

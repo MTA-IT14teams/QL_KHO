@@ -31,7 +31,6 @@ namespace QL_KHO.Controller
         // lấy dữ liệu sử dụng thủ tục trong sql
         public DataTable GetData(string NameProc, SqlParameter[] para)
         {
-
             SqlCommand cmd = new SqlCommand(NameProc, conn);
             // cmd.CommandText = NameProc;
             cmd.CommandType = CommandType.StoredProcedure;
@@ -111,9 +110,5 @@ namespace QL_KHO.Controller
         {
             return GetData(strTimKiem);
         }
-
-
-
-
     }
 }
