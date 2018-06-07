@@ -29,7 +29,6 @@ namespace QL_KHO.View
             dgvHangHoa.Rows[e.RowIndex].Cells["STT"].Value = e.RowIndex + 1;
         }
 
-
         // Mở button
         private void DisEnl(bool e)
         {
@@ -40,8 +39,7 @@ namespace QL_KHO.View
             txtMaHH.Enabled = e;
             txtTenHH.Enabled = e;
             txtSoLuong.Enabled = e;
-            cbMaNCC.Enabled = e;
-          
+            cbMaNCC.Enabled = e;       
         }
 
         // xóa trắng
@@ -67,6 +65,7 @@ namespace QL_KHO.View
             cbMaNCC.DisplayMember = "tenNCC";
             cbMaNCC.ValueMember = "maNCC";
         }
+
         // Hàm Load
         private void uC_HangHoa_Load(object sender, EventArgs e)
         {
@@ -91,7 +90,6 @@ namespace QL_KHO.View
             this.txtMaHH.Focus();
             Clear();
             DisEnl(true);
-            //txtMaNCC.Enabled = false;
         }
 
         // Sửa 
@@ -215,8 +213,7 @@ namespace QL_KHO.View
             if (cbTimKiem.Text == "Số lượng")
             {
                 dgvHangHoa.DataSource = HH_ctl.TimKiemHH("select * from HangHoa where soluong like '%" + txtTimKiem.Text.Trim() + "%'");
-            }
-            
+            }            
         }
     }
 }
