@@ -165,8 +165,8 @@ namespace QL_KHO.View
                 {
                     MessageBox.Show("Lỗi" + ex.Message);
                 }
-
             }
+
             else if (txtMaHH.Text != "" && txtTenHH.Text != "" && txtSoLuong.Text != "" && cbMaNCC.Text != "" && hanhdong != 0)
             {
                 try
@@ -182,10 +182,7 @@ namespace QL_KHO.View
                 {
                     MessageBox.Show("Lỗi" + ex.Message);
                 }
-
             }
-
-
         }
 
         // Thoát
@@ -197,8 +194,7 @@ namespace QL_KHO.View
                 this.Hide();
             }
             else
-                HienThi();
-               
+                HienThi();         
         }
 
         // Tìm kiếm
@@ -221,11 +217,6 @@ namespace QL_KHO.View
                 dgvHangHoa.DataSource = HH_ctl.TimKiemHH("select * from HangHoa where soluong like '%" + txtTimKiem.Text.Trim() + "%'");
             }
             
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }
