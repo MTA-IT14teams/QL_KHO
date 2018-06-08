@@ -17,7 +17,6 @@ namespace QL_KHO.View
         HangHoa HH = new HangHoa();
         HangHoa_controller HH_ctl = new HangHoa_controller();
         private int hanhdong = 1;
-        //private object cboMaNCC;
 
         public uC_HangHoa()
         {
