@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_ThongKe));
             this.label1 = new System.Windows.Forms.Label();
             this.grBTitle = new System.Windows.Forms.GroupBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -35,6 +36,7 @@
             this.btn_HangHoaNhap = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_HangHoaXuat = new System.Windows.Forms.ToolStripMenuItem();
             this.dtg_HHN_HHX = new System.Windows.Forms.DataGridView();
+            this.btnexportExcel = new System.Windows.Forms.ToolStripMenuItem();
             this.grBTitle.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_HHN_HHX)).BeginInit();
@@ -65,31 +67,38 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btn_HangHoa,
             this.btn_HangHoaNhap,
-            this.btn_HangHoaXuat});
+            this.btn_HangHoaXuat,
+            this.btnexportExcel});
             this.menuStrip1.Location = new System.Drawing.Point(4, 94);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(368, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(485, 41);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // btn_HangHoa
             // 
+            this.btn_HangHoa.Image = ((System.Drawing.Image)(resources.GetObject("btn_HangHoa.Image")));
+            this.btn_HangHoa.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btn_HangHoa.Name = "btn_HangHoa";
-            this.btn_HangHoa.Size = new System.Drawing.Size(71, 20);
+            this.btn_HangHoa.Size = new System.Drawing.Size(103, 37);
             this.btn_HangHoa.Text = "Hàng hóa";
             this.btn_HangHoa.Click += new System.EventHandler(this.btn_HangHoa_Click);
             // 
             // btn_HangHoaNhap
             // 
+            this.btn_HangHoaNhap.Image = ((System.Drawing.Image)(resources.GetObject("btn_HangHoaNhap.Image")));
+            this.btn_HangHoaNhap.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btn_HangHoaNhap.Name = "btn_HangHoaNhap";
-            this.btn_HangHoaNhap.Size = new System.Drawing.Size(101, 20);
+            this.btn_HangHoaNhap.Size = new System.Drawing.Size(133, 37);
             this.btn_HangHoaNhap.Text = "Hàng hóa nhập";
             this.btn_HangHoaNhap.Click += new System.EventHandler(this.btn_HangHoaNhap_Click);
             // 
             // btn_HangHoaXuat
             // 
+            this.btn_HangHoaXuat.Image = ((System.Drawing.Image)(resources.GetObject("btn_HangHoaXuat.Image")));
+            this.btn_HangHoaXuat.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btn_HangHoaXuat.Name = "btn_HangHoaXuat";
-            this.btn_HangHoaXuat.Size = new System.Drawing.Size(96, 20);
+            this.btn_HangHoaXuat.Size = new System.Drawing.Size(128, 37);
             this.btn_HangHoaXuat.Text = "Hàng hóa xuất";
             this.btn_HangHoaXuat.Click += new System.EventHandler(this.btn_HangHoaXuat_Click);
             // 
@@ -103,6 +112,15 @@
             this.dtg_HHN_HHX.Size = new System.Drawing.Size(1163, 441);
             this.dtg_HHN_HHX.TabIndex = 1;
             // 
+            // btnexportExcel
+            // 
+            this.btnexportExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnexportExcel.Image")));
+            this.btnexportExcel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.btnexportExcel.Name = "btnexportExcel";
+            this.btnexportExcel.Size = new System.Drawing.Size(113, 37);
+            this.btnexportExcel.Text = "Export Excel";
+            this.btnexportExcel.Click += new System.EventHandler(this.btnexportExcel_Click);
+            // 
             // uc_ThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,6 +130,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "uc_ThongKe";
             this.Size = new System.Drawing.Size(1163, 576);
+            this.Load += new System.EventHandler(this.uc_ThongKe_Load);
             this.grBTitle.ResumeLayout(false);
             this.grBTitle.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -131,5 +150,6 @@
         private System.Windows.Forms.ToolStripMenuItem btn_HangHoaNhap;
         private System.Windows.Forms.ToolStripMenuItem btn_HangHoaXuat;
         private System.Windows.Forms.DataGridView dtg_HHN_HHX;
+        private System.Windows.Forms.ToolStripMenuItem btnexportExcel;
     }
 }
