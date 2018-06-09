@@ -160,7 +160,7 @@ namespace QL_KHO.View
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi" + ex.Message);
+                    MessageBox.Show("Lỗi, không thêm được!" + ex.Message);
                 }
             }
 
@@ -177,7 +177,7 @@ namespace QL_KHO.View
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi" + ex.Message);
+                    MessageBox.Show("Lỗi, không sửa được!!" + ex.Message);
                 }
             }
         }
